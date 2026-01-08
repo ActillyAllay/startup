@@ -1,4 +1,4 @@
-# Your startup name here
+# TeleStory
 
 [My Notes](notes.md)
 
@@ -26,7 +26,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-Lorem ipsum
+A digital adaptation of the game Paper Telephone. Take turns with the other players to write a story--the catch is that you can't see the beginning of the story, only the last snippet. You can use Telestory to quickly set up a room and play the game digitally. Use it as an icebreaker, a brainstorming session, or a casual game to laugh at with friends.
 
 ### Design
 
