@@ -30,7 +30,7 @@ A digital adaptation of the game Paper Telephone. Take turns with the other play
 
 ### Design
 
-![Design image](Placeholder.jpg)
+![Design image](TelestoryDesignThumbnails.png)
 
 Lorem ipsum
 
