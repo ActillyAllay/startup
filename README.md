@@ -26,7 +26,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Whenever my friends and I sit down for a game of Dnd, we love to play background music to match the mood. However, suddenly changing songs can be jarring, and switching between playlists as we move between scenes can be a pain. My startup Loop Deck will give the user control over the way their music loops and changes tracks, with simple hotkeys to streamline the process. Loop Deck can be used to play background music for any task, turning the music from a distraction to a seamless background element.
 
 ### Design
 
