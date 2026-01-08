@@ -52,12 +52,12 @@ sequenceDiagram
 
 ### Key features
 
-- Access music inputted by user
-- Play music directly using a media player
-- Immediately loop or unloop the music
-- Control the fade of music transitions
-- Access settings quickly using hotkeys
-- Create and save playlists with authorized user login 
+- User authentication and unique usernames
+- Join and host games
+- Control game settings as host
+- Switch around writing snippets in real time for snappy gameplay
+- See the progress and reactions of other players as you write
+- Read and save full stories after the game
 
 ### Technologies
 
