@@ -37,10 +37,10 @@ The main page consists of a music player, where users can mess with settings dir
 ```mermaid
 sequenceDiagram
     actor User
-    actor Music Player
-    actor Login Page
-    actor Playlists
-    User->>Music Player
+    participant Music Player
+    participant Login Page
+    participant Playlists
+    User->>Music Player:
     Music Player->>Login Page: Log in
     Login Page->>Music Player: After logging in
     Playlists->>Music Player: Listen to playlists
