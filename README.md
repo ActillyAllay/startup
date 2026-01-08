@@ -32,13 +32,19 @@ Whenever my friends and I sit down for a game of Dnd, we love to play background
 
 ![Design image](LoopDeckDesignThumnails.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The main page consists of a music player, where users can mess with settings directly, use hotkeys to control the music settings, and add playlists to the queue. The login page allows users to log in to their accounts. Once logged in, users can access the playlists page, where they can input music and create playlists.
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor User
+    actor Music Player
+    actor Login Page
+    actor Playlists
+    User->>Music Player
+    Music Player->>Login Page: Log in
+    Login Page->>Music Player: After logging in
+    Playlists->>Music Player: Listen to playlists
+    Playlists->>Playlists: Input music
 ```
 
 ### Key features
