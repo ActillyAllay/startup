@@ -1,4 +1,4 @@
-# Your startup name here
+# Loop Deck
 
 [My Notes](notes.md)
 
