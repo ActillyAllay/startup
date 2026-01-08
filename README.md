@@ -42,6 +42,7 @@ sequenceDiagram
     participant Playlists
     User->>Music Player:
     Music Player->>Login Page: Log in
+    Music Player->>Playlists: Go to saved playlists
     Login Page->>Music Player: After logging in
     Playlists->>Music Player: Listen to playlists
     Playlists->>Playlists: Input music
