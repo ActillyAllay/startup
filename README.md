@@ -32,20 +32,22 @@ A digital adaptation of the game Paper Telephone. Take turns with the other play
 
 ![Design image](TelestoryDesignThumbnails.png)
 
-Lorem ipsum
+The user will log in at the Title Page. From there, they will be able to search for a room to join or host a room. The room page will give the host access to game settings, and list out players. Once started, the game will have its own page that dynamically changes to match the gameplay.
 
 ```mermaid
 sequenceDiagram
     actor User
-    participant Music Player
-    participant Login Page
-    participant Playlists
-    User->>Music Player:
-    Music Player->>Login Page: Log in
-    Music Player->>Playlists: Go to saved playlists
-    Login Page->>Music Player: After logging in
-    Playlists->>Music Player: Listen to playlists
-    Playlists->>Playlists: Input music
+    participant Title Page
+    participant Room Search
+    participant Game Room
+    participant Game@{"type":"collections"}
+    User->>Title Page:
+    Title Page->>Room Search: Log in
+    Room Search->>Game Room: Host a room
+    Room Search->>Game Room: Join a room
+    Game Room->>Game: Start
+    Game->>Game: Play session
+    Game->>Room Search: Play another round
 ```
 
 ### Key features
