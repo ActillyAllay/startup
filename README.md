@@ -63,12 +63,12 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - 
-- **CSS** - 
-- **React** - 
-- **Service** - 
-- **DB/Login** - 
-- **WebSocket** - 
+- **HTML** - Provide structure for multiple pages: title page, room search, game room, and game. 
+- **CSS** - Animate and decorate gameplay; give other pages a cohesive design.
+- **React** - Create an interface for text input; respond to user changing settings; create and delete rooms.
+- **Service** - Receive and transfer text inputs; user authentication; third party call for randomized prompts.
+- **DB/Login** - Store user information and finalized story.
+- **WebSocket** - Show new rooms in real time; display user status to other users during game.
 
 ## 🚀 AWS deliverable
 
