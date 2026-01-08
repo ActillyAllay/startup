@@ -26,13 +26,13 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-Whenever my friends and I sit down for a game of Dnd, we love to play background music to match the mood. However, suddenly changing songs can be jarring, and switching between playlists as we move between scenes can be a pain. My startup Loop Deck will give the user control over the way their music loops and changes tracks, with simple hotkeys to streamline the process. Loop Deck can be used to play background music for any task, turning the music from a distraction to a seamless background element.
+Lorem ipsum
 
 ### Design
 
-![Design image](LoopDeckDesignThumnails.png)
+![Design image](Placeholder.jpg)
 
-The main page consists of a music player, where users can mess with settings directly, use hotkeys to control the music settings, and add playlists to the queue. The login page allows users to log in to their accounts. Once logged in, users can access the playlists page, where they can input music and create playlists.
+Lorem ipsum
 
 ```mermaid
 sequenceDiagram
@@ -61,12 +61,12 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Provide structure to three views: music player, playlists, and login page.
-- **CSS** - Add decorative color scheme. Create animated buttons for intuitive controls.
-- **React** - Let the user switch between the three views. Respond to user interaction with the music player and playlist settings.
-- **Service** - Allow user authentication. Store and retrieve user playlists and settings. Third party call for the music player plugin, or for accessing music.
-- **DB/Login** - Storage of user playlists and login information.
-- **WebSocket** - Display music progress/changes in realtime with duration bar and queue.
+- **HTML** - 
+- **CSS** - 
+- **React** - 
+- **Service** - 
+- **DB/Login** - 
+- **WebSocket** - 
 
 ## 🚀 AWS deliverable
 
