@@ -43,9 +43,12 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Access music inputted by user
+- Play music directly using a media player
+- Immediately loop or unloop the music
+- Control the fade of music transitions
+- Access settings quickly using hotkeys
+- Create and save playlists with authorized user login 
 
 ### Technologies
 
