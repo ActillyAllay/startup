@@ -61,12 +61,12 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Provide structure to three views: music player, playlists, and login page.
+- **CSS** - Add decorative color scheme. Create animated buttons for intuitive controls.
+- **React** - Let the user switch between the three views. Respond to user interaction with the music player and playlist settings.
+- **Service** - Allow user authentication. Store and retrieve user playlists and settings. Third party call for the music player plugin, or for accessing music.
+- **DB/Login** - Storage of user playlists and login information.
+- **WebSocket** - Display music progress/changes in realtime with duration bar and queue.
 
 ## 🚀 AWS deliverable
 
