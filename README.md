@@ -1,4 +1,4 @@
-# Your startup name here
+# Loop Deck
 
 [My Notes](notes.md)
 
@@ -19,14 +19,14 @@ A brief description of the application here. Lorem ipsum dolor sit amet, consect
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **Proper use of Markdown** - _1/5/26_ - I read the above Markdown documentation. I replaced the placeholder image with a new image to test committing new files and images in Markdown. 
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Whenever my friends and I sit down for a game of Dnd, we love to play background music to match the mood. However, suddenly changing songs can be jarring, and switching between playlists as we move between scenes can be a pain. My startup Loop Deck will give the user control over the way their music loops and changes tracks, with simple hotkeys to streamline the process. Loop Deck can be used to play background music for any task, turning the music from a distraction to a seamless background element.
+Whenever my friends and I sit down for a game of DnD, we love to play background music to match the mood. However, suddenly changing songs can be jarring, and switching between playlists as we move between scenes can be a pain. My startup Loop Deck will give the user control over the way their music loops and changes tracks, with simple hotkeys to streamline the process. Loop Deck can be used to play background music for any task, turning the music from a distraction to a seamless background element.
 
 ### Design
 
@@ -63,8 +63,8 @@ I am going to use the required technologies in the following ways.
 
 - **HTML** - Provide structure to three views: music player, playlists, and login page.
 - **CSS** - Add decorative color scheme. Create animated buttons for intuitive controls.
-- **React** - Let the user switch between the three views. Respond to user interaction with the music player and playlist settings.
-- **Service** - Allow user authentication. Store and retrieve user playlists and settings. Third party call for the music player plugin, or for accessing music.
+- **React** - Control the music player. Let the user switch between the three views. Respond to user interaction with the music player and playlist settings.
+- **Service** - Allow user authentication. Store and retrieve user playlists and settings. Third party call for grabbing music and for changing background colors.
 - **DB/Login** - Storage of user playlists and login information.
 - **WebSocket** - Display music progress/changes in realtime with duration bar and queue.
 
