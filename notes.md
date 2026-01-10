@@ -46,6 +46,17 @@ git fetch
 git push
 ```
 
+## AWS
+
+My AWS server is automatically connected to my technology stack thanks to the class preset. It has a t2.micro instance type and is using an elastic IP.
+
+>**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
+
+IP: 35.168.139.76
+`ssh -i <directory to .pem> ubuntu@35.168.139.76'
+
+>Used to access the console window and directory for my server
+
 ## Miscellaneous
 
 From the existing notes that were in this template:
