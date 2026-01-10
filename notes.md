@@ -50,11 +50,11 @@ git push
 
 My AWS server is automatically connected to my technology stack thanks to the class preset. It has a t2.micro instance type and is using an elastic IP.
 
->**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
+>!**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
 
 IP: 35.168.139.76
 
-`ssh -i <directory to .pem> ubuntu@35.168.139.76'
+`ssh -i <directory to .pem> ubuntu@35.168.139.76`
 
 >Used to access the console window and directory for my server
 
@@ -66,6 +66,5 @@ From the existing notes that were in this template:
 ```html
 [code]
 ```
-```
 
->Lets the code look like the specified type in Markdown.
+>Lets the code look like the specified type (in this case HTML) in Markdown.
