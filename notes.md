@@ -53,6 +53,7 @@ My AWS server is automatically connected to my technology stack thanks to the cl
 >!**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
 
 IP: 35.168.139.76
+Domain name: dndmusicplayer.click
 
 `ssh -i <directory to .pem> ubuntu@35.168.139.76`
 
