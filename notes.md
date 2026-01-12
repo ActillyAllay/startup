@@ -53,11 +53,16 @@ My AWS server is automatically connected to my technology stack thanks to the cl
 >!**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
 
 IP: 35.168.139.76
+
 Domain name: dndmusicplayer.click
 
 `ssh -i <directory to .pem> ubuntu@35.168.139.76`
 
 >Used to access the console window and directory for my server
+
+**Troubleshooting**
+
+Currently the `dig`, `traceroute` and `whois` commands do not work in Powershell or gitbash for me. Currently unresolved; my guess is they're a plugin that needs to be installed.
 
 ## Miscellaneous
 
