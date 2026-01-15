@@ -1,6 +1,8 @@
 # Cassie Rust - CS 260 Notes
 
-[My startup - Placeholder name here](https://github.com/ActillyAllay/startup)
+[LoopDeck Website](https://startup.dndmusicplayer.click)
+
+[GitHub Page for LoopDeck](https://github.com/ActillyAllay/startup)
 
 ## Helpful links
 
@@ -63,6 +65,10 @@ Domain name: dndmusicplayer.click
 **Troubleshooting**
 
 Currently the `dig`, `traceroute` and `whois` commands do not work in Powershell or gitbash for me. Currently unresolved; my guess is they're a plugin that needs to be installed.
+
+## Caddy
+
+Caddy allows the website to be HTTPS instead of HTTP using Let's Encrypt. It can also work as a reverse proxy.
 
 ## Miscellaneous
 
