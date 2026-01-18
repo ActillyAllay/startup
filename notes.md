@@ -70,6 +70,14 @@ Currently the `dig`, `traceroute` and `whois` commands do not work in Powershell
 
 Caddy allows the website to be HTTPS instead of HTTP using Let's Encrypt. It can also work as a reverse proxy.
 
+## HTML
+
+Make sure to start all documents with `<!DOCTYPE html>` to define the doc. This is separate from the `<html>` tag, which comes right after and is a structure to designate the whole page.
+
+My CodePen account is linked to my GitHub account now. CodePen allows new pens or forking of existing pens, so there's lots of other users' pens to explore for ideas.
+
+[My CodePen Account](https://codepen.io/ActillyAllay)
+
 ## Miscellaneous
 
 From the existing notes that were in this template:
