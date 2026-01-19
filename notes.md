@@ -50,6 +50,8 @@ git push
 
 ## AWS
 
+**Notes**
+
 My AWS server is automatically connected to my technology stack thanks to the class preset. It has a t2.micro instance type and is using an elastic IP.
 
 >!**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
@@ -72,11 +74,19 @@ Caddy allows the website to be HTTPS instead of HTTP using Let's Encrypt. It can
 
 ## HTML
 
+**Notes**
+
 Make sure to start all documents with `<!DOCTYPE html>` to define the doc. This is separate from the `<html>` tag, which comes right after and is a structure to designate the whole page.
+
+Multiple different input elements can be used. `<form>` keeps all the inputs in one submission. Keep an eye on the range, progress, and file attributes--those could come in handy for the startup.
 
 My CodePen account is linked to my GitHub account now. CodePen allows new pens or forking of existing pens, so there's lots of other users' pens to explore for ideas.
 
 [My CodePen Account](https://codepen.io/ActillyAllay)
+
+**Troubleshooting**
+
+Just a question not a trouble--why connect labels to specific inputs? What makes it different from a nonconnected label or a header nested next to the input?
 
 ## Miscellaneous
 
