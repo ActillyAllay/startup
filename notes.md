@@ -80,13 +80,19 @@ Make sure to start all documents with `<!DOCTYPE html>` to define the doc. This 
 
 Multiple different input elements can be used. `<form>` keeps all the inputs in one submission. Keep an eye on the range, progress, and file attributes--those could come in handy for the startup.
 
+Media elements are external page references from URLs or internal media created from the code. Controls and loop are auto-built into HTML--can these be controlled by JS as well, or just the user? This will be very important for my startup. Audio, canvas, and svg need closing tags, while image and video are self-contained.
+
+`img; audio; video; svg; canvas`
+
 My CodePen account is linked to my GitHub account now. CodePen allows new pens or forking of existing pens, so there's lots of other users' pens to explore for ideas.
 
 [My CodePen Account](https://codepen.io/ActillyAllay)
 
-**Troubleshooting**
+**Insights + Troubleshooting**
 
-Just a question not a trouble--why connect labels to specific inputs? What makes it different from a nonconnected label or a header nested next to the input?
+Why connect labels to specific inputs? What makes it different from a nonconnected label or a header nested next to the input?
+
+The CodePen examples close self-containing tags like `<tag attrs />`. From previous experience I don't think the closing slash is necessary, but it's good to know for consistent style and keeping track of nested structures.
 
 ## Miscellaneous
 
