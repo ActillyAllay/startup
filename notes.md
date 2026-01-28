@@ -56,6 +56,12 @@ My AWS server is automatically connected to my technology stack thanks to the cl
 
 >!**Note to Self:** Keep track of payment charges! After the semester ends, go cancel whatever you want cancelled.
 
+The Simon subdomain is now connected to my clone of the Simon repository. It has a deployment script that deletes the old deployment and replaces it with the updated files, getting the static files from a Git repository to the server directory. Run the deployment script by putting a dot in front of it in the command prompt.
+
+`./deployFiles.sh -k <server pass key location> -h <domain name> -s <subdomain>`
+
+>Deploys files (script is in the simon-html repository)
+
 IP: 35.168.139.76
 
 Domain name: dndmusicplayer.click
