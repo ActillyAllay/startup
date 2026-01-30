@@ -67,23 +67,19 @@ I am going to use the required technologies in the following ways.
 
 ## 🚀 AWS deliverable
 
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
 
 ## 🚀 HTML deliverable
 
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - Three pages for the main music player, accessing playlists, and logging in.
+- [x] **Proper HTML element usage** - Pages use header, main, and footer elements, as well as nav and div elements to separate different sections.
+- [x] **Links** - All three pages link to each other. Logging in redirects to the music player page.
+- [x] **Text** - Descriptions, labels, and placeholders are all written out in text.
+- [x] **3rd party API placeholder** - The add song button will call for 3rd party access to music sites. (If this is not possible, a 3rd party API will be called to change CSS colors instead.)
+- [x] **Images** - An SVG image is used for the website favicon. A placeholder image shows the album cover for a playlist.
+- [x] **Login placeholder** - The login page includes user input boxes and buttons to submit the form.
+- [x] **DB data placeholder** - The playlist order, album covers, etc. will be stored in the database for each user.
+- [x] **WebSocket placeholder** - The music player and queue will react in real time to user input. (If this does not qualify as WebSocket use, then another page can be added to view other users' playlists and playlists will be shared in real time.)
 
 ## 🚀 CSS deliverable
 
