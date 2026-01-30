@@ -100,6 +100,10 @@ Why connect labels to specific inputs? What makes it different from a nonconnect
 
 The CodePen examples close self-containing tags like `<tag attrs />`. From previous experience I don't think the closing slash is necessary, but it's good to know for consistent style and keeping track of nested structures.
 
+`nav` can go inside `header`. `menu` is a semantic version of `ul` for nav buttons.
+
+Putting anything in between the `music` tags seems to do nothing, yet the closing tag turns red when it's typed as self-containing. Curious. 
+
 ## Miscellaneous
 
 From the existing notes that were in this template:

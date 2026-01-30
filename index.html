@@ -13,14 +13,14 @@
 
     <header>
       <div id="headerTitle">
-        Loop Deck
+        <h1>Loop Deck</h1>
       </div>
       <div id="headerUser">
         <a href="login.html">Log In</a>
       </div>
       <nav>
-        <menu id="navButtons">
-          <li>Music Player</li>
+        <menu id="headerButtons">
+          <li>Music Player (Selected)</li>
           <li><a href="playlists.html">Playlists</a></li>
         </menu>
       </nav>
@@ -28,7 +28,12 @@
 
     <main>
       <div id="player" style="border: black solid">
-        Music Player
+        <h3>Music Player</h3>
+        <p>Now Playing: Dreams of Our Generation (Placeholder)</p>
+        <audio controls src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
+        <div id="controls">
+          <button>Settings</button> <button>Loop</button> <button>Fade</button>
+        </div>
       </div>
       <br />
       <div id="queue" style="border: blue solid">
@@ -54,7 +59,7 @@
       <hr />
       <div id="footerAbout">
         <p>Created by Cassie Rust for CS 260</p>
-        <a href="https://github.com/ActillyAllay/startup">Loop Deck GitHub Repository</a>
+        <a href="https://github.com/ActillyAllay/startup">GitHub Repository</a>
       </div>
     </footer>
 
