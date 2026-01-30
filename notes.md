@@ -11,6 +11,8 @@
 - [MDN](https://developer.mozilla.org)
 - [Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
+- [MDN Page for <audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio)
+
 
 ## Git
 
@@ -103,9 +105,3 @@ The CodePen examples close self-containing tags like `<tag attrs />`. From previ
 `nav` can go inside `header`. `menu` is a semantic version of `ul` for nav buttons.
 
 According to MDN, the content inside the `audio` tags is a backup in case the browser doesn't load the element.
-
-## Resources
-
-**For HTML:**
-
-[MDN Page for <audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio)
