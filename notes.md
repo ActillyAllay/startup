@@ -102,15 +102,10 @@ The CodePen examples close self-containing tags like `<tag attrs />`. From previ
 
 `nav` can go inside `header`. `menu` is a semantic version of `ul` for nav buttons.
 
-Putting anything in between the `music` tags seems to do nothing, yet the closing tag turns red when it's typed as self-containing. Curious. 
+According to MDN, the content inside the `audio` tags is a backup in case the browser doesn't load the element.
 
-## Miscellaneous
+## Resources
 
-From the existing notes that were in this template:
+**For HTML:**
 
-```
-```html
-[code]
-```
-
->Lets the code look like the specified type (in this case HTML) in Markdown.
+[MDN Page for <audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio)

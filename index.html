@@ -31,17 +31,35 @@
       <div id="player" style="border: black solid">
         <h3>Music Player</h3>
         <p>Now Playing: Dreams of Our Generation (Placeholder)</p>
-        <audio controls src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
+        <!-- Replace controls with custom controls once on JS phase -->
+        <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
         <div id="controls">
           <button>Settings</button> <button>Loop</button> <button>Fade</button>
         </div>
       </div>
       <br />
       <div id="queue" style="border: blue solid">
-        Queue
+        <h3>Queue</h3>
+        <table>
+          <tr>
+            <th>#</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Dreams of Our Generation</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+          </tr>
+        </table>
       </div>
       <br />
-      <div id="addSongs">
+      <div id="songs">
         <button>Add songs to the queue</button>
       </div>
     </main>
