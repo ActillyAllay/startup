@@ -99,6 +99,10 @@
         background-color: pink;
         border: red outset 10px;
         border-radius: 5px;
+
+        /* Adds a scrollbar with overflow */
+        overflow-y: auto;
+        scrollbar-color: red pink;
       }
 
       #queue h3 {
@@ -107,12 +111,50 @@
 
       table {
         font-family: "Ubuntu", sans-serif;
-        width: 100%;
+        width: 90%;
+        border-collapse: collapse;
+        margin: auto;
       }
 
       tr {
-        border-top: red solid;
-        border-bottom: red solid;
+        border: #9e637e solid 5px;
+      }
+
+      td {
+        padding: 10px;
+        background-color: #efbfd5;
+      }
+
+      td button {
+        background-color: #f2dbda;
+        padding: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border: #c69fb1 solid 3px;
+        color: inherit;
+      }
+      td button:hover {
+        background-color: #ddb5c7;
+      }
+      td button:active {
+        background-color: #c69fb1;
+      }
+
+      button.upload {
+        padding: 10px;
+        background-color: #efbfd5;
+        border: #9e637e solid 5px;
+        border-radius: 5px;
+        font-family: "Nunito", sans-serif;
+        font-weight: bold;
+        color: inherit;
+      }
+      button.upload:hover {
+        background-color: #ddb5c7;
+      }
+      button.upload:active {
+        background-color: #c69fb1;
       }
     </style>
 
@@ -150,19 +192,14 @@
       <div>
         <div id="queue">
           <table>
-            <h3>Queue</h3>
+            <h3>Queue</h3>           
             <tr>
-              <th>#</th>
-            </tr>
-            <tr>
-              <td>1</td>
               <td>Dreams of Our Generation</td>
               <td>(Placeholder for Song Info)</td>
               <td><button>&uarr;</button><button>&darr;</button></td>
               <td><button>X</button></td>
             </tr>
             <tr>
-              <td>2</td>
               <td>Different Song</td>
               <td>(Placeholder for Song Info)</td>
               <td><button>&uarr;</button><button>&darr;</button></td>
@@ -172,7 +209,7 @@
           <br />
         </div>
         <div id="songUpload">
-          <button>Add songs to the queue</button>
+          <button class="upload">Add songs to the queue</button>
         </div>
       </div>
     </main>
