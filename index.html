@@ -27,22 +27,48 @@
 
       body {
         font-family: "Nunito", sans-serif;
+        /* body has natural padding so making main a different color isn't enough
+          to cut across the whole screen. linear-gradient is used instead. */
+        background: linear-gradient(to bottom,
+                    #f2dbda 0%, #f2dbda 120px,
+                    gray 120px, gray 100%);
       }
 
-      h1 {
+      #headerUser {
+        float: right;
+      }
+
+      #headerTitle {
         font-family: "Reglo", serif;
       }
 
-      table {
-        font-family: "Ubuntu", sans-serif;
+      menu {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
       }
 
-      #player p {
-        font-family: "Ubuntu", sans-serif;
+      menu li {
+        background-color: pink;
+        border: red solid 5px;
+        /* Atm, the rounded corners don't work nicely with the tabsDivider.
+           Implement round corners in future. */
+        /*border-radius: 5px;*/
+        padding: 5px 10px;
+        margin: 5px 8px;
       }
+
+      .selected {
+        border-bottom: gray solid 5px;
+        background-color: gray;
+      }
+
+      #tabsDivider {
+        border: red solid 3px;
+        margin: -26px -20px 20px -20px;
+      } 
 
       #player {
-        
         background-color: pink;
         border: red outset 10px;
         border-radius: 5px;
@@ -55,29 +81,38 @@
         max-width: 400px;
         box-sizing: border-box;
       }
+
+      #player p {
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      table {
+        font-family: "Ubuntu", sans-serif;
+      }
     </style>
 
   </head>
   <body>
 
     <header>
-      <div id="headerTitle">
-        <h1>Loop Deck</h1>
-      </div>
       <div id="headerUser">
         <p>Logged in as User</p>
       </div>
+      <div id="headerTitle">
+        <h1>Loop Deck</h1>
+      </div>
       <nav>
         <menu id="headerButtons">
-          <li>Music Player (Selected)</li>
+          <li class="selected">Music Player</li>
           <li><a href="playlists.html">Playlists</a></li>
           <li><a href="login.html">Log In/Log Out</a></li>
         </menu>
+        
       </nav>
     </header>
 
     <main>
-      <hr />
+      <hr id="tabsDivider" />
       <div id="player">
         <h3>Music Player</h3>
         <p>Now Playing: Dreams of Our Generation</p>
