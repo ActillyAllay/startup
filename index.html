@@ -29,15 +29,16 @@
         font-family: "Nunito", sans-serif;
         /* body has natural padding so making main a different color isn't enough
           to cut across the whole screen. linear-gradient is used instead. */
+        background-repeat: no-repeat;
         background: linear-gradient(to bottom,
                     #ddb5c7 0%, #ddb5c7 120px,
-                    #f2dbda 120px, #f2dbda 100%);
+                    #f2dbda 120px, #f2dbda calc(100% - 95px), #ddb5c7 calc(100% - 95px), #ddb5c7 100%);    
         color: #47192d;
       }
 
       #headerUser {
         float: right;
-        margin: 0px 12px;
+        margin: 0px 10px;
         font-family: "Ubuntu", sans-serif;
       }
 
@@ -53,15 +54,14 @@
       }
 
       menu li {
-        background-color: pink;
-        border: red solid 5px;
+        background-color: #c69fb1;
+        border: #9e637e solid 5px;
         /* Atm, the rounded corners don't work nicely with the tabsDivider.
            Implement round corners in future. */
         /*border-radius: 5px;*/
         padding: 5px 10px;
         margin: 5px 8px;
       }
-
       menu li:hover {
         background-color: #f2dbda;
       }
@@ -78,8 +78,8 @@
       }
 
       #tabsDivider {
-        border: red solid 3px;
-        margin: -26px -20px 20px -20px;
+        border: #9e637e solid 3px;
+        margin: -26px -7px 20px -8px;
       } 
 
       #player {
@@ -160,6 +160,39 @@
       }
       button.upload:active {
         background-color: #c69fb1;
+      }
+
+      #footerHotkeys {
+        background-color: pink;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 15px 10px 20px 10px;
+      }
+
+      footer hr {
+        border: #9e637e solid 3px;
+        margin: 0px -8px 0px -8px;
+      }
+      
+      #footerHotkeys h3 {
+        margin: 0px;
+        padding: 10px;
+        text-decoration: underline;
+      }
+
+      #footerHotkeys ul {
+        margin: 0px 0px 5px 10px;
+      }
+
+      #footerAbout {
+        padding: 0px 10px 10px 10px;
+      }
+
+      #footerAbout a {
+        text-decoration: underline;
+      }
+      #footerAbout a:hover {
+        color: #9e637e;
       }
     </style>
 
