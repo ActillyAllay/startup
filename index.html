@@ -30,12 +30,15 @@
         /* body has natural padding so making main a different color isn't enough
           to cut across the whole screen. linear-gradient is used instead. */
         background: linear-gradient(to bottom,
-                    #f2dbda 0%, #f2dbda 120px,
-                    gray 120px, gray 100%);
+                    #ddb5c7 0%, #ddb5c7 120px,
+                    #f2dbda 120px, #f2dbda 100%);
+        color: #47192d;
       }
 
       #headerUser {
         float: right;
+        margin: 0px 12px;
+        font-family: "Ubuntu", sans-serif;
       }
 
       #headerTitle {
@@ -46,6 +49,7 @@
         display: flex;
         list-style-type: none;
         justify-content: center;
+        font-weight: bold;
       }
 
       menu li {
@@ -58,9 +62,15 @@
         margin: 5px 8px;
       }
 
+      a {
+        /* Gets rid of the browser formatting of the links */
+        color: inherit;
+        text-decoration: inherit;
+      }
+
       .selected {
-        border-bottom: gray solid 5px;
-        background-color: gray;
+        border-bottom: #f2dbda solid 5px;
+        background-color: #f2dbda;
       }
 
       #tabsDivider {
@@ -73,7 +83,6 @@
         border: red outset 10px;
         border-radius: 5px;
         padding: 10px;
-        /*margin: 5px 5px 5px 10vw;*/
         /* Makes the box a square (1/1 ratio) */
         aspect-ratio: 1/1;
         /* Is below necessary? Test when formatting for mobile + portrait */
@@ -82,12 +91,28 @@
         box-sizing: border-box;
       }
 
-      #player p {
+      .songInfo {
         font-family: "Ubuntu", sans-serif;
+      }
+
+      #queue {
+        background-color: pink;
+        border: red outset 10px;
+        border-radius: 5px;
+      }
+
+      #queue h3 {
+        text-align: center;
       }
 
       table {
         font-family: "Ubuntu", sans-serif;
+        width: 100%;
+      }
+
+      tr {
+        border-top: red solid;
+        border-bottom: red solid;
       }
     </style>
 
@@ -114,37 +139,38 @@
     <main>
       <hr id="tabsDivider" />
       <div id="player">
-        <h3>Music Player</h3>
-        <p>Now Playing: Dreams of Our Generation</p>
+        <p>Currently Playing:</p>
+        <p class="songInfo">Dreams of Our Generation</p>
         <!-- Replace controls with custom controls once on JS phase -->
         <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
         <div id="controls">
           <button>Settings</button> <button>Loop</button> <button>Fade</button>
         </div>
       </div>
-      <hr />
-      <div id="queue">
-        <h3>Queue</h3>
-        <table>
-          <tr>
-            <th>#</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Dreams of Our Generation</td>
-            <td>(Placeholder for Song Info)</td>
-            <td><button>&uarr;</button><button>&darr;</button></td>
-            <td><button>X</button></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Different Song</td>
-            <td>(Placeholder for Song Info)</td>
-            <td><button>&uarr;</button><button>&darr;</button></td>
-            <td><button>X</button></td>
-          </tr>
-        </table>
-        <br />
+      <div>
+        <div id="queue">
+          <table>
+            <h3>Queue</h3>
+            <tr>
+              <th>#</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Dreams of Our Generation</td>
+              <td>(Placeholder for Song Info)</td>
+              <td><button>&uarr;</button><button>&darr;</button></td>
+              <td><button>X</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Different Song</td>
+              <td>(Placeholder for Song Info)</td>
+              <td><button>&uarr;</button><button>&darr;</button></td>
+              <td><button>X</button></td>
+            </tr>
+          </table>
+          <br />
+        </div>
         <div id="songUpload">
           <button>Add songs to the queue</button>
         </div>
@@ -152,7 +178,6 @@
     </main>
     
     <footer>
-      <hr />
       <div id="footerHotkeys">
         <h3>Hotkeys</h3>
         <ul>
