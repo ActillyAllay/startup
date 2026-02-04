@@ -105,3 +105,19 @@ The CodePen examples close self-containing tags like `<tag attrs />`. From previ
 `nav` can go inside `header`. `menu` is a semantic version of `ul` for nav buttons.
 
 According to MDN, the content inside the `audio` tags is a backup in case the browser doesn't load the element.
+
+## CSS
+
+**Notes**
+
+Animations are done with the `animation-name` property and the `@keyframes` ruleset.
+
+Responsive design is when the application reacts to different viewport sizes. Using `block` and `inline` is helpful for arrangement. The property `float` has a value of left or right and lets other elements wrap around it.
+
+`<meta name=”viewport” content=”width=device-width, initial-scale=1” />`
+
+>Stops the browser from auto-scaling and messing with coded responsive design
+
+**Insights + Troubleshooting**
+
+The natural margin of the body is 8px. Any elements outside that margin will force a horizaontal scrollbar to show up. You can overlap into that box by putting a negative margin on a box. 
