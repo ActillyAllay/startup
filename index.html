@@ -8,9 +8,9 @@
     <title>Loop Deck</title>
     <!-- Favicon sourced from fontawesome.com -->
     <link rel="icon" href="compact-disc-solid.svg" />
-    <!-- Importing Bootstrap framework for CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" />
+    <!-- Importing Bootstrap framework for CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    Currently it breaks my tab divider ;-; Try tailwind? -->
     
     <style>
       @font-face {
@@ -59,9 +59,8 @@
       menu li {
         background-color: #c69fb1;
         border: #9e637e solid 5px;
-        /* Atm, the rounded corners don't work nicely with the tabsDivider.
-           Implement round corners in future. */
-        /*border-radius: 5px;*/
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         padding: 5px 10px;
         margin: 5px 8px;
       }
@@ -85,7 +84,24 @@
         margin: -26px -7px 20px -8px;
       } 
 
+      #gridWrapper {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "player queue" ". upload";
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+        justify-items: center;
+      }
+      @media (orientation: portrait) or (max-width: 900px) {
+        #gridWrapper {
+          grid-template-areas: "player" "queue" "upload";
+          grid-template-columns: 1fr;
+        }
+      }
+
       #player {
+        grid-area: player;
         background-color: pink;
         border: red outset 10px;
         border-radius: 5px;
@@ -95,6 +111,7 @@
         /* Is below necessary? Test when formatting for mobile + portrait */
         width: 90vw;
         max-width: 400px;
+        /* Bootstrap auto makes everything border-box, so this is redundant atm */
         box-sizing: border-box;
       }
 
@@ -103,9 +120,11 @@
       }
 
       #queue {
+        grid-area: queue;
         background-color: pink;
         border: red outset 10px;
         border-radius: 5px;
+        box-sizing: border-box;
 
         /* Adds a scrollbar with overflow */
         overflow-y: auto;
@@ -146,6 +165,10 @@
       }
       td button:active, #controls button:active {
         background-color: #c69fb1;
+      }
+
+      #songUpload {
+        grid-area: upload;
       }
 
       button.upload {
@@ -221,37 +244,39 @@
 
     <main>
       <hr id="tabsDivider" />
+      <div id="gridWrapper">
       <div id="player">
+        
+        <img style="float: right; margin: 10px;" src="placeholder.jpg" width="100px" />
         <p>Currently Playing:</p>
         <p class="songInfo">Dreams of Our Generation</p>
         <!-- Replace controls with custom controls once on JS phase -->
         <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
         <div id="controls">
-          <button>Settings</button> <button>Loop</button> <button>Fade</button>
+          <button class="btn" type="button">Settings</button> <button>Loop</button> <button>Fade</button>
         </div>
       </div>
-      <div>
-        <div id="queue">
-          <table>
-            <h3>Queue</h3>           
-            <tr>
-              <td>Dreams of Our Generation</td>
-              <td>(Placeholder for Song Info)</td>
-              <td><button>&uarr;</button><button>&darr;</button></td>
-              <td><button>X</button></td>
-            </tr>
-            <tr>
-              <td>Different Song</td>
-              <td>(Placeholder for Song Info)</td>
-              <td><button>&uarr;</button><button>&darr;</button></td>
-              <td><button>X</button></td>
-            </tr>
-          </table>
-          <br />
-        </div>
-        <div id="songUpload">
-          <button class="upload">Add songs to the queue</button>
-        </div>
+      <div id="queue">
+        <table>
+          <h3>Queue</h3>           
+          <tr>
+            <td>Dreams of Our Generation</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+          </tr>
+          <tr>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+           </tr>
+        </table>
+        <br />
+      </div>
+      <div id="songUpload">
+        <button class="upload">Add songs to the queue</button>
+      </div>
       </div>
     </main>
     

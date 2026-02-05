@@ -88,8 +88,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
 - [ ] **Navigation elements** - I did not complete this part of the deliverable.
 - [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
+- [x] **Application elements** - Each element is given color, borders, padding, etc. to be visually appealing.
+- [x] **Application text content** - The text uses two different imported fonts (Ubuntu and Nunito), and a third font Reglo is used for the logo. Different padding and text weight is applied to different text content.
 - [ ] **Application images** - I did not complete this part of the deliverable.
 
 ## 🚀 React part 1: Routing deliverable
