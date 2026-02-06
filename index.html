@@ -81,7 +81,7 @@
 
       #tabsDivider {
         border: #9e637e solid 3px;
-        margin: -26px -7px 20px -8px;
+        margin: -26px -8px 20px -8px;
       } 
 
       #gridWrapper {
@@ -89,11 +89,11 @@
         margin: auto;
         display: grid;
         grid-template-areas: "player queue" ". upload";
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
         justify-items: center;
       }
-      @media (orientation: portrait) or (max-width: 900px) {
+      @media (orientation: portrait) or (max-width: 925px) {
         #gridWrapper {
           grid-template-areas: "player" "queue" "upload";
           grid-template-columns: 1fr;
@@ -108,10 +108,8 @@
         padding: 10px;
         /* Makes the box a square (1/1 ratio) */
         aspect-ratio: 1/1;
-        /* Is below necessary? Test when formatting for mobile + portrait */
         width: 90vw;
         max-width: 400px;
-        /* Bootstrap auto makes everything border-box, so this is redundant atm */
         box-sizing: border-box;
       }
 
@@ -125,6 +123,9 @@
         border: red outset 10px;
         border-radius: 5px;
         box-sizing: border-box;
+        max-height: 500px;
+        max-width: 500px;
+        width: 90vw;
 
         /* Adds a scrollbar with overflow */
         overflow-y: auto;
@@ -265,6 +266,30 @@
             <td><button>&uarr;</button><button>&darr;</button></td>
             <td><button>X</button></td>
           </tr>
+          <tr>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+           </tr>
+          <tr>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+           </tr>
+          <tr>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+           </tr>
+          <tr>
+            <td>Different Song</td>
+            <td>(Placeholder for Song Info)</td>
+            <td><button>&uarr;</button><button>&darr;</button></td>
+            <td><button>X</button></td>
+           </tr>
           <tr>
             <td>Different Song</td>
             <td>(Placeholder for Song Info)</td>

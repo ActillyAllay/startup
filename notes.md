@@ -130,3 +130,4 @@ The natural margin of the body is 8px. Any elements outside that margin will for
 - Fix the up and down queue buttons.
 - Try changing the grid-template from a set thing at two media widths into a max-width column.
 - Make the font smaller!!! Test on a phone (300-400px)!!!
+- ^^Redo the header and footer to fit on phone
