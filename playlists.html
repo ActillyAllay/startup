@@ -11,8 +11,12 @@
     <link href="main.css" rel="stylesheet" />
     
     <style>
+      #listSelected {
+        font-weight: bold;
+      }
+
       #listView {
-        padding: 10px;
+        padding: 10px 10px;
         overflow-y: auto;
         scrollbar-color: red pink;
         scrollbar-gutter: stable both-edges;
@@ -20,8 +24,20 @@
         margin: 20px auto;
       }
 
-      #listView h3 {
+      #listInfo h3 {
         font-weight: bold;
+        /* display: inline; */
+        font-size: 20px;
+      }
+
+      #listInfo button {
+        font-weight: normal;
+        margin-left: 10px;
+      }
+
+      #listUpload {
+        margin: 20px 10px 10px 10px;
+        float: inline-end;
       }
 
     </style>
@@ -39,7 +55,7 @@
       <nav>
         <menu id="headerButtons">
           <li><a href="index.html">Music Player</a></li>
-          <li class="selected">Playlists (Selected)</li>
+          <li class="selected">Playlists</li>
           <li><a href="login.html">Log In/Log Out</a></li>
         </menu>
       </nav>
@@ -48,25 +64,21 @@
     <main>
       <hr id="tabsDivider" />
       <div id="listSelect">
+        <button id="listUpload" class="upload">Load into the music player</button>
         <h3>Playlists</h3>
         <ul>
-          <li>Smooth Jams (Selected)</li>
+          <li id="listSelected">Smooth Jams (Selected)</li>
           <li>Nature Sounds</li>
           <li>Other Playlist</li>
         </ul>
       </div>
-      <hr />
 
       <div id="listView" class="box">
-        <div>
-          <img class="album" src="placeholder.jpg" width="100px" />
+        <img class="album" src="placeholder.jpg" width="100px" />
+        <div id="listInfo">
           <h3>Smooth Jams</h3>
-        </div>
-        <div>
           <button>Edit this playlist</button>
-          <button>Load into the music player</button>
         </div>
-        <br />
         <div>
           <table>
             <tr>
