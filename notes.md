@@ -121,3 +121,12 @@ Responsive design is when the application reacts to different viewport sizes. Us
 **Insights + Troubleshooting**
 
 The natural margin of the body is 8px. Any elements outside that margin will force a horizaontal scrollbar to show up. You can overlap into that box by putting a negative margin on a box. 
+
+## To-Do
+
+**CSS**
+
+- The nav tabs have whitespace under the text that doesn't click. At some point, turn them into proper buttons/change the link box somehow.
+- Fix the up and down queue buttons.
+- Try changing the grid-template from a set thing at two media widths into a max-width column.
+- Make the font smaller!!! Test on a phone (300-400px)!!!
