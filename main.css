@@ -86,17 +86,20 @@ a {
   }
 }
 
-#player {
-  grid-area: player;
+.box {
   background-color: pink;
   border: red outset 10px;
   border-radius: 5px;
+  box-sizing: border-box;
+  width: 90vw;
+}
+
+#player {
+  grid-area: player;
   padding: 10px;
   /* Makes the box a square (1/1 ratio) */
   aspect-ratio: 1/1;
-  width: 90vw;
   max-width: 400px;
-  box-sizing: border-box;
 }
 
 .songInfo {
@@ -106,6 +109,7 @@ a {
 .album {
   float: right;
   margin: 10px;
+  border: #9e637e inset 5px;
 }
 
 #audioWrapper {
@@ -121,13 +125,8 @@ a {
 
 #queue {
   grid-area: queue;
-  background-color: pink;
-  border: red outset 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
   max-height: 500px;
   max-width: 500px;
-  width: 90vw;
 
   /* Adds a scrollbar with overflow */
   overflow-y: auto;
@@ -147,7 +146,7 @@ table {
 }
 
 tr {
-  border: #9e637e solid 5px;
+  border: #9e637e inset 5px;
 }
 
 td {
@@ -155,7 +154,7 @@ td {
   background-color: #efbfd5;
 }
 
-td button, #audioWrapper button {
+button {
   background-color: #f2dbda;
   padding: 5px;
   font-size: 16px;
@@ -163,10 +162,9 @@ td button, #audioWrapper button {
   border: #c69fb1 solid 3px;
   color: inherit;
 }
-td button:hover, #audioWrapper button:hover {
+button:hover {
   background-color: #ddb5c7;
-}
-td button:active, #audioWrapper button:active {
+}button:active {
   background-color: #c69fb1;
 }
 

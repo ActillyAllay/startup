@@ -10,27 +10,43 @@
     <link rel="icon" href="compact-disc-solid.svg" />
     <link href="main.css" rel="stylesheet" />
     
+    <style>
+      #listView {
+        padding: 10px;
+        overflow-y: auto;
+        scrollbar-color: red pink;
+        scrollbar-gutter: stable both-edges;
+        width: 90vw;
+        margin: 20px auto;
+      }
+
+      #listView h3 {
+        font-weight: bold;
+      }
+
+    </style>
+
   </head>
   <body>
 
     <header>
-      <div id="headerTitle">
-        <h1>Loop Deck</h1>
-      </div>
       <div id="headerUser">
         <p>Logged in as User</p>
+      </div>
+      <div id="headerTitle">
+        <h1>Loop Deck</h1>
       </div>
       <nav>
         <menu id="headerButtons">
           <li><a href="index.html">Music Player</a></li>
-          <li>Playlists (Selected)</li>
+          <li class="selected">Playlists (Selected)</li>
           <li><a href="login.html">Log In/Log Out</a></li>
         </menu>
       </nav>
     </header>
 
     <main>
-      <hr />
+      <hr id="tabsDivider" />
       <div id="listSelect">
         <h3>Playlists</h3>
         <ul>
@@ -40,10 +56,11 @@
         </ul>
       </div>
       <hr />
-      <div id="listView">
+
+      <div id="listView" class="box">
         <div>
+          <img class="album" src="placeholder.jpg" width="100px" />
           <h3>Smooth Jams</h3>
-          <img src="placeholder.jpg" width="100px" />
         </div>
         <div>
           <button>Edit this playlist</button>
