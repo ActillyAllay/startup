@@ -117,6 +117,22 @@
         font-family: "Ubuntu", sans-serif;
       }
 
+      .album {
+        float: right;
+        margin: 10px;
+      }
+
+      #audioWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        padding: 40px 0px 0px 0px;
+        gap: 25px 0px;
+        justify-content: space-around;
+        
+      }
+
       #queue {
         grid-area: queue;
         background-color: pink;
@@ -130,6 +146,7 @@
         /* Adds a scrollbar with overflow */
         overflow-y: auto;
         scrollbar-color: red pink;
+        scrollbar-gutter: stable both-edges;
       }
 
       #queue h3 {
@@ -152,19 +169,18 @@
         background-color: #efbfd5;
       }
 
-      td button, #controls button {
+      td button, #audioWrapper button {
         background-color: #f2dbda;
         padding: 5px;
-        margin-left: 10px;
         font-size: 16px;
         font-weight: bold;
         border: #c69fb1 solid 3px;
         color: inherit;
       }
-      td button:hover, #controls button:hover {
+      td button:hover, #audioWrapper button:hover {
         background-color: #ddb5c7;
       }
-      td button:active, #controls button:active {
+      td button:active, #audioWrapper button:active {
         background-color: #c69fb1;
       }
 
@@ -247,14 +263,15 @@
       <hr id="tabsDivider" />
       <div id="gridWrapper">
       <div id="player">
-        
-        <img style="float: right; margin: 10px;" src="placeholder.jpg" width="100px" />
+        <img class="album" src="placeholder.jpg" width="100px" />
         <p>Currently Playing:</p>
         <p class="songInfo">Dreams of Our Generation</p>
         <!-- Replace controls with custom controls once on JS phase -->
-        <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
-        <div id="controls">
-          <button class="btn" type="button">Settings</button> <button>Loop</button> <button>Fade</button>
+        <div id="audioWrapper">
+          <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
+          <button>Settings</button>
+          <button>Loop</button>
+          <button>Fade</button>
         </div>
       </div>
       <div id="queue">
