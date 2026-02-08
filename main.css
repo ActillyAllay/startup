@@ -59,6 +59,9 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+a:hover {
+  color: #47192d;
+}
 
 .selected {
   border-bottom: #f2dbda solid 5px;
