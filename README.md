@@ -85,11 +85,11 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - Each section has CSS applied to it to separate them out visually. (tailwind)
-- [ ] **Responsive to window resizing** - The grid layout keeps the main elements centered when resizing. At smaller widths, the layout responds by becoming a single column.
-- [ ] **Application elements** - Each element is given color, borders, padding, etc. to be visually appealing.
-- [ ] **Application text content** - The text uses two different imported fonts (Ubuntu and Nunito), and a third font Reglo is used for the logo. Different padding and text weight is applied to different text content.
-- [ ] **Application images** - The placeholder images are given a border and stylized to let text wrap around them.
+- [x] **Header, footer, and main content body** - Each section has CSS applied to it to separate them out visually. The header and footer keep their content consistent between pages.
+- [x] **Responsive to window resizing** - The grid layout and width properties keeps the main elements centered when resizing. At smaller widths, the index.html layout responds by becoming a single column.
+- [x] **Application elements** - Each element is given color, borders, padding, etc. to be visually appealing. The login.html page utilizes the Bootstrap framework to stylize the form elements.
+- [x] **Application text content** - The text uses two different imported fonts (Ubuntu and Nunito), and a third font Reglo is used for the logo. Different padding and text weight is applied to different text content.
+- [x] **Application images** - The placeholder images are given a border and stylized to let text wrap around them.
 
 ## 🚀 React part 1: Routing deliverable
 
