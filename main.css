@@ -23,6 +23,7 @@ body {
               #ddb5c7 0%, #ddb5c7 120px,
               #f2dbda 120px, #f2dbda calc(100% - 95px), #ddb5c7 calc(100% - 95px), #ddb5c7 100%);    
   color: #47192d;
+  cursor: default;
 }
 
 #headerUser {
@@ -66,6 +67,8 @@ a:hover {
 .selected {
   border-bottom: #f2dbda solid 5px;
   background-color: #f2dbda;
+  /* Currently redundant, but leaving in to preserve design intention
+     in case I change the navigation code at some point */
   cursor: default;
 }
 
@@ -91,8 +94,8 @@ a:hover {
 }
 
 .box {
-  background-color: pink;
-  border: red outset 10px;
+  background-color: #ffc0cb;
+  border: #ed909e outset 10px;
   border-radius: 5px;
   box-sizing: border-box;
   width: 90vw;
@@ -134,7 +137,7 @@ a:hover {
 
   /* Adds a scrollbar with overflow */
   overflow-y: auto;
-  scrollbar-color: red pink;
+  scrollbar-color: #ed909e #ffc0cb;
   scrollbar-gutter: stable both-edges;
 }
 
@@ -165,6 +168,7 @@ button {
   font-weight: bold;
   border: #c69fb1 solid 3px;
   color: inherit;
+  cursor: pointer;
 }
 button:hover {
   background-color: #ddb5c7;
@@ -185,7 +189,6 @@ button.upload {
   font-weight: bold;
   font-size: 12pt;
   color: inherit;
-  cursor: pointer;
 }
 button.upload:hover {
   background-color: #ddb5c7;
@@ -195,7 +198,7 @@ button.upload:active {
 }
 
 #footerHotkeys {
-  background-color: pink;
+  background-color: #ffc0cb;
   border-radius: 5px;
   padding: 5px;
   margin: 15px 10px 20px 10px;
@@ -225,4 +228,16 @@ footer hr {
 }
 #footerAbout a:hover {
   color: #9e637e;
+}
+
+/* playlists.html specific */
+
+
+
+/* login.html specific */
+
+#formWrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 5px 0px 5px;
 }
