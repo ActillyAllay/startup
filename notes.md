@@ -10,8 +10,10 @@
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 - [Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [NPM Packages](npmjs.com)
 
 - [MDN Page for <audio>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio)
+
 
 
 ## Git
@@ -121,6 +123,28 @@ Responsive design is when the application reacts to different viewport sizes. Us
 **Insights + Troubleshooting**
 
 The natural margin of the body is 8px. Any elements outside that margin will force a horizaontal scrollbar to show up. You can overlap into that box by putting a negative margin on a box. 
+
+## JavaScript
+
+JS is an interpreter coding language, so it has runtime errors and try/except testing similar to Python. Node and NPM allow local executing JS outside of a browser and installing packages.
+
+**Include node_modules in the .gitignore file!**
+
+[JavaScript Class Example](https://htmlpreview.github.io/?https://github.com/webprogramming260/webprogramming/blob/main/instruction/javascript/introduction/jsDemo.html)
+
+**Insights + Troubleshooting**
+
+--
+
+### Common Commands
+
+`console.log();`
+
+>Inputs a function or code, takes the output and prints it to the console
+
+`const name = require("package-name");`
+
+>Allows access to package functions as name.func in the .js file
 
 ## To-Do
 
