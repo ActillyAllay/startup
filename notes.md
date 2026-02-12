@@ -128,13 +128,15 @@ The natural margin of the body is 8px. Any elements outside that margin will for
 
 JS is an interpreter coding language, so it has runtime errors and try/except testing similar to Python. Node and NPM allow local executing JS outside of a browser and installing packages.
 
-**Include node_modules in the .gitignore file!**
+***Include node_modules in the .gitignore file!***
 
 [JavaScript Class Example](https://htmlpreview.github.io/?https://github.com/webprogramming260/webprogramming/blob/main/instruction/javascript/introduction/jsDemo.html)
 
-**Insights + Troubleshooting**
+Some of the tools in a toolchain include a linter, minifier and prettier, which keep code standardized and efficient; a transpiler, which compiles code into different formats; a polyfill that generates backwards-compatible code for older browsers; a bundler for delivering code to the browser; a tester, at multiple levels, for correctness; and a deployer to package and deliver code to the production environment.
 
---
+### Vite
+
+Vite sets up the toolchain with the command line. When in the Vite directory, use `npm run dev` to host the code locally for testing and `npm run build` to package the code into the *dist* directory which is ready for deployment. The deployReact script for this class automatically runs the build script and deploys the resulting directory.
 
 ### Common Commands
 
@@ -145,6 +147,10 @@ JS is an interpreter coding language, so it has runtime errors and try/except te
 `const name = require("package-name");`
 
 >Allows access to package functions as name.func in the .js file
+
+**Insights + Troubleshooting**
+
+--
 
 ## To-Do
 
