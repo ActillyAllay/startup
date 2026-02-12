@@ -138,6 +138,16 @@ Some of the tools in a toolchain include a linter, minifier and prettier, which 
 
 Vite sets up the toolchain with the command line. When in the Vite directory, use `npm run dev` to host the code locally for testing and `npm run build` to package the code into the *dist* directory which is ready for deployment. The deployReact script for this class automatically runs the build script and deploys the resulting directory.
 
+### React
+
+React uses JSX files. JSX is used in development, then Vite transforms them into HTML and JS files for production deployment. The main page should still be index.jsx. 
+
+```
+npm init -y
+npm install vite@latest -D
+npm install react react-dom
+```
+
 ### Common Commands
 
 `console.log();`
