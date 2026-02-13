@@ -142,11 +142,16 @@ Vite sets up the toolchain with the command line. When in the Vite directory, us
 
 React uses JSX files. JSX is used in development, then Vite transforms them into HTML and JS files for production deployment. The main page should still be index.jsx. 
 
+One of the benefits of React is the ability to use components, which reduces repeat code and lets the code better represent what the user interface looks like. Component elements like `<Func />` load a component function; the function returns the JSX code that will go in the location of the element.
+
+Components can have attributes passed in as arguments. They can also have states changed and updated, like button toggles. Whenever a state or property changes, the `render` function will automatically rerender the page. Components can be part of a return of other components, leading to nested rendering of a page.
+
 ```
 npm init -y
 npm install vite@latest -D
 npm install react react-dom
 ```
+A web framework router allows for single-page applications. This class uses react-router-dom. 
 
 ### Common Commands
 
@@ -160,7 +165,9 @@ npm install react react-dom
 
 **Insights + Troubleshooting**
 
---
+`class` is a keyword in JS, so it can't be used as an element attribute in JSX. Instead, use `className`.
+
+Why is it always JavaScript and not JS?
 
 ## To-Do
 
