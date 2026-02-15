@@ -229,15 +229,3 @@ footer hr {
 #footerAbout a:hover {
   color: #9e637e;
 }
-
-/* playlists.html specific */
-
-
-
-/* login.html specific */
-
-#formWrapper {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px 5px 0px 5px;
-}

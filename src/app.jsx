@@ -36,15 +36,6 @@ export default function App() {
         </Routes>
 
         <footer>
-          <div id="footerHotkeys">
-            <h3>Hotkeys</h3>
-            <ul>
-              <li>Placeholder</li>
-              <li>For</li>
-              <li>Hotkeys</li>
-              <li>Here</li>
-            </ul>
-          </div>
           <hr />
           <div id="footerAbout">
             <p>Created by Cassie Rust for CS 260</p>
