@@ -91,11 +91,9 @@ I am going to use the required technologies in the following ways.
 
 ## 🚀 React part 1: Routing deliverable
 
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
-
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [x] **Bundled using Vite** - Vite and React were properly installed. The files were bundled and deployed with Vite.
+- [x] **Components** - The header and footer were replaced with a single version in app.jsx, and the main sections were turned into JSX components.
+- [x] **Router** - All the pages can be accessed through router NavLinks.
 
 ## 🚀 React part 2: Reactivity deliverable
 
