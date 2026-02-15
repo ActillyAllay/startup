@@ -14,7 +14,7 @@
   src: url("https://cdn.jsdelivr.net/fontsource/fonts/nunito@latest/latin-400-normal.woff2");
 }
 
-body {
+.body {
   font-family: "Nunito", sans-serif;
   /* body has natural padding so making main a different color isn't enough
     to cut across the whole screen. linear-gradient is used instead. */
