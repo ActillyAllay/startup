@@ -167,8 +167,6 @@ A web framework router allows for single-page applications. This class uses reac
 
 `class` is a keyword in JS, so it can't be used as an element attribute in JSX. Instead, use `className`.
 
-Why is it always JavaScript and not JS?
-
 ## To-Do
 
 **CSS**
