@@ -1,4 +1,4 @@
-body {
+main {
   margin: 7px;
 }
 
@@ -7,16 +7,7 @@ footer hr {
   margin: 0px -8px 12px -8px;
 }
 
-h1{
-  font-size: 32px;
-  margin: -1px 0px;
-}
-
 #tabsDivider {
   opacity: 100%;
   margin: -42px -8px 20px -8px;
-}
-
-nav {
-  line-height: normal;
 }

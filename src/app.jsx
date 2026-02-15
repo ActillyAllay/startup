@@ -10,7 +10,7 @@ import { Music } from './music/music';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="body bg-dark text-light">
+      <div className="body">
         <header>
           <div id="headerUser">
             <p>Logged in as User</p>
