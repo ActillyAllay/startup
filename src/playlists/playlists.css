@@ -1,0 +1,28 @@
+#listSelected {
+  font-weight: bold;
+}
+
+#listView {
+  padding: 10px 10px;
+  overflow-y: auto;
+  scrollbar-color: red pink;
+  scrollbar-gutter: stable both-edges;
+  width: 90vw;
+  margin: 20px auto;
+}
+
+#listInfo h3 {
+  font-weight: bold;
+  /* display: inline; */
+  font-size: 20px;
+}
+
+#listInfo button {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+#listUpload {
+  margin: 20px 10px 10px 10px;
+  float: inline-end;
+}
