@@ -153,6 +153,14 @@ npm install react react-dom
 ```
 A web framework router allows for single-page applications. This class uses react-router-dom. 
 
+### JS
+
+Use `let` to create a variable and `const` to construct an object.
+
+Local storage can hold string, numbers, and booleans. Switch to and from JSON formatting with `JSON.stringify` and `JSON.parse` to store other data types as JSON strings.
+
+Objects have properties with values, which can be assigned and used in a dictionary-like array. Functions and classes are good for component-izing new objects.
+
 ### Common Commands
 
 `console.log();`
@@ -163,9 +171,15 @@ A web framework router allows for single-page applications. This class uses reac
 
 >Allows access to package functions as name.func in the .js file
 
+`() => 5 - 3;`
+
+>Using arrows to make an unnamed function with no input and an output of 2
+
 **Insights + Troubleshooting**
 
 `class` is a keyword in JS, so it can't be used as an element attribute in JSX. Instead, use `className`.
+
+Why do a function within a function for onClick? Is it because of rerendering delays?
 
 ## To-Do
 
