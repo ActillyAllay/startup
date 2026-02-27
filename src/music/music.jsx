@@ -18,8 +18,9 @@ export function Music() {
           </div>
         </div>
         <div id="queue" className="box">
+          <h3>Queue</h3>
           <table>
-            <h3>Queue</h3>           
+          <tbody>           
             <tr>
               <td>Dreams of Our Generation</td>
               <td>(Placeholder for Song Info)</td>
@@ -56,6 +57,7 @@ export function Music() {
               <td><button>&uarr;</button><button>&darr;</button></td>
               <td><button>X</button></td>
             </tr>
+          </tbody>
           </table>
           <br />
         </div>

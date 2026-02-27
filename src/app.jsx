@@ -7,14 +7,23 @@ import { Login } from './login/login';
 import { Playlists } from './playlists/playlists';
 import { Music } from './music/music';
 
+
+
 export default function App() {
+
+  // const [auth, changeAuth] = React.useState(false);
+  localStorage.setItem("auth", true);
+  localStorage.setItem("username", "Me");
+
   return (
     <BrowserRouter>
       <div className="body">
         <header>
-          <div id="headerUser">
-            <p>Logged in as User</p>
-          </div>
+          {localStorage.getItem(auth) === true && (
+            <div id="headerUser">
+              <p>Logged in as {localStorage.getItem("username")}</p>
+            </div>
+          )}
           <div id="headerTitle">
             <h1>Loop Deck</h1>
           </div>
