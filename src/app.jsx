@@ -55,11 +55,11 @@ export default function App() {
             <menu id="headerButtons">
               <li className="selected"><NavLink to="">Music Player</NavLink></li>
               <li><NavLink to="playlists">Playlists</NavLink></li>
-              {auth === true && (
+              {auth === false && (
               <li><NavLink to="login">Log In</NavLink></li>
               )}
-              {auth === false && (
-              <li><NavLink to="playlists">Log Out</NavLink></li>
+              {auth === true && (
+              <li><NavLink to="" onClick={authButton}>Log Out</NavLink></li>
               )}
             </menu>
           </nav>
@@ -67,7 +67,8 @@ export default function App() {
 
         <Routes>
           <Route path='/' element={<Music />} exact />
-          <Route path='/playlists' element={<Playlists />} />
+          {/* Pass along variables to components as element properties*/}
+          <Route path='/playlists' element={<Playlists auth={auth} />} />
           <Route path='/login' element={<Login />} />
           {/* Links to the function at the end of this doc */}
           <Route path='*' element={<NotFound />} />
