@@ -12,14 +12,38 @@ import { Music } from './music/music';
 export default function App() {
 
   // const [auth, changeAuth] = React.useState(false);
-  localStorage.setItem("auth", true);
+  // localStorage.setItem("auth", true);
   localStorage.setItem("username", "Me");
+  // const [auth, setAuth] = React.useState(true);
+
+  const [username, setUsername] = React.useState(localStorage.getItem('username') || '');
+  //If username is a value, then authenticated, else unauth
+  let authValue = username ? true : false;
+  const [auth, setAuth] = React.useState(authValue);
+  function authTest() {
+    if (auth === true) {
+      console.log("Auth is true");
+    }
+    else if (auth === false) {
+      console.log("Auth is false");
+    }
+    else {
+      console.log("Auth is neither");
+    }
+  }
+  authTest();
+
+  function authButton() {
+    setAuth(auth === true ? false : true);
+    console.log("Auth is now " + {auth});
+  }
 
   return (
     <BrowserRouter>
       <div className="body">
         <header>
-          {localStorage.getItem(auth) === true && (
+          <button onClick={authButton}>Test AuthState</button>
+          {auth === true && (
             <div id="headerUser">
               <p>Logged in as {localStorage.getItem("username")}</p>
             </div>
@@ -31,7 +55,12 @@ export default function App() {
             <menu id="headerButtons">
               <li className="selected"><NavLink to="">Music Player</NavLink></li>
               <li><NavLink to="playlists">Playlists</NavLink></li>
-              <li><NavLink to="login">Log In/Log Out</NavLink></li>
+              {auth === true && (
+              <li><NavLink to="login">Log In</NavLink></li>
+              )}
+              {auth === false && (
+              <li><NavLink to="playlists">Log Out</NavLink></li>
+              )}
             </menu>
           </nav>
         </header>
