@@ -11,31 +11,15 @@ import { Music } from './music/music';
 
 export default function App() {
 
-  // const [auth, changeAuth] = React.useState(false);
-  // localStorage.setItem("auth", true);
   localStorage.setItem("username", "Me");
-  // const [auth, setAuth] = React.useState(true);
 
   const [username, setUsername] = React.useState(localStorage.getItem('username') || '');
-  //If username is a value, then authenticated, else unauth
+  {/* If username is a value, then authenticated, else unauth */}
   let authValue = username ? true : false;
   const [auth, setAuth] = React.useState(authValue);
-  function authTest() {
-    if (auth === true) {
-      console.log("Auth is true");
-    }
-    else if (auth === false) {
-      console.log("Auth is false");
-    }
-    else {
-      console.log("Auth is neither");
-    }
-  }
-  authTest();
 
   function authButton() {
     setAuth(auth === true ? false : true);
-    console.log("Auth is now " + {auth});
   }
 
   return (
@@ -52,7 +36,7 @@ export default function App() {
             <h1>Loop Deck</h1>
           </div>
           <nav>
-            <menu id="headerButtons">
+            {/* <menu id="headerButtons">
               <li className="selected"><NavLink to="">Music Player</NavLink></li>
               <li><NavLink to="playlists">Playlists</NavLink></li>
               {auth === false && (
@@ -61,13 +45,29 @@ export default function App() {
               {auth === true && (
               <li><NavLink to="" onClick={authButton}>Log Out</NavLink></li>
               )}
+            </menu> */}
+            {auth === true && (
+            <menu id="headerButtons">
+              <li className="selected"><NavLink to="">Music Player</NavLink></li>
+              <li><NavLink to="playlists">Playlists</NavLink></li>
+              <li><NavLink to="" onClick={authButton}>Log Out</NavLink></li>
             </menu>
+            )}
+            
+            {auth === false && (
+            <menu id="headerButtons">
+              <li className="selected"><NavLink to="">Music Player</NavLink></li>
+              <li><NavLink to="login">Playlists</NavLink></li>
+              <li><NavLink to="login">Log In</NavLink></li>
+            </menu>
+            )}
           </nav>
         </header>
 
         <Routes>
           <Route path='/' element={<Music />} exact />
           {/* Pass along variables to components as element properties*/}
+          {/* Currently unused but kept in to show example */}
           <Route path='/playlists' element={<Playlists auth={auth} />} />
           <Route path='/login' element={<Login />} />
           {/* Links to the function at the end of this doc */}
