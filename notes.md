@@ -181,6 +181,8 @@ Objects have properties with values, which can be assigned and used in a diction
 
 Why do a function within a function for onClick? Is it because of rerendering delays?
 
+`auth === true ? false : true` acts as a single line version of if/then/else
+
 ## To-Do
 
 **CSS**
@@ -190,3 +192,7 @@ Why do a function within a function for onClick? Is it because of rerendering de
 - Try changing the grid-template from a set thing at two media widths into a max-width column.
 - Make the font smaller!!! Test on a phone (300-400px)!!!
 - ^^Redo the header and footer to fit on phone
+
+**JavaScript**
+
+- Make the Log In button automatically redirect user to the music page

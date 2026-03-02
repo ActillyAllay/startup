@@ -3,7 +3,6 @@ import React from 'react';
 export function Music() {
   return (
     <main>
-      <hr id="tabsDivider" />
       <div id="gridWrapper">
         <div id="player" className="box">
           <img className="album" src="placeholder.jpg" width="100px" />

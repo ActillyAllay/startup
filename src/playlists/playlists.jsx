@@ -5,7 +5,6 @@ import "./playlists.css";
 export function Playlists(props) {
   return (
     <main>
-      <hr id="tabsDivider" />
       <div id="listSelect">
         <button id="listUpload" className="upload">Load into the music player</button>
         <h3>Playlists</h3>

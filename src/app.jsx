@@ -11,12 +11,10 @@ import { Music } from './music/music';
 
 export default function App() {
 
-  localStorage.setItem("username", "Me");
-
   const [username, setUsername] = React.useState(localStorage.getItem('username') || '');
-  {/* If username is a value, then authenticated, else unauth */}
-  let authValue = username ? true : false;
-  const [auth, setAuth] = React.useState(authValue);
+  {/* If username is already assigned a value, then authenticated, else unauth */}
+  let initialAuth = username ? true : false;
+  const [auth, setAuth] = React.useState(initialAuth);
 
   function authButton() {
     setAuth(auth === true ? false : true);
@@ -26,26 +24,15 @@ export default function App() {
     <BrowserRouter>
       <div className="body">
         <header>
-          <button onClick={authButton}>Test AuthState</button>
           {auth === true && (
             <div id="headerUser">
-              <p>Logged in as {localStorage.getItem("username")}</p>
+              <p>Logged in as {username}</p>
             </div>
           )}
           <div id="headerTitle">
             <h1>Loop Deck</h1>
           </div>
           <nav>
-            {/* <menu id="headerButtons">
-              <li className="selected"><NavLink to="">Music Player</NavLink></li>
-              <li><NavLink to="playlists">Playlists</NavLink></li>
-              {auth === false && (
-              <li><NavLink to="login">Log In</NavLink></li>
-              )}
-              {auth === true && (
-              <li><NavLink to="" onClick={authButton}>Log Out</NavLink></li>
-              )}
-            </menu> */}
             {auth === true && (
             <menu id="headerButtons">
               <li className="selected"><NavLink to="">Music Player</NavLink></li>
@@ -62,14 +49,21 @@ export default function App() {
             </menu>
             )}
           </nav>
+          <hr id="tabsDivider" />
         </header>
 
         <Routes>
           <Route path='/' element={<Music />} exact />
+          <Route path='/playlists' element={<Playlists />} />
           {/* Pass along variables to components as element properties*/}
-          {/* Currently unused but kept in to show example */}
-          <Route path='/playlists' element={<Playlists auth={auth} />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login
+            auth={auth}
+            userLogin={(u="") => {
+              authButton();
+              setUsername(u);
+              localStorage.setItem("username", u);
+            }}
+          />} />
           {/* Links to the function at the end of this doc */}
           <Route path='*' element={<NotFound />} />
         </Routes>

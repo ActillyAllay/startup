@@ -74,8 +74,14 @@ a:hover {
 
 #tabsDivider {
   border: #9e637e solid 3px;
-  margin: -26px -8px 20px -8px;
+  margin: -16px -8px 20px -8px;
+  /* Bootstrap makes the hrs transparent by default */
+  opacity: 100%;
 } 
+
+main {
+  margin: 7px;
+}
 
 #gridWrapper {
   width: 90%;
@@ -206,7 +212,8 @@ button.upload:active {
 
 footer hr {
   border: #9e637e solid 3px;
-  margin: 0px -8px 0px -8px;
+  margin: 0px -8px 16px -8px;
+  opacity: 100%;
 }
 
 #footerHotkeys h3 {
