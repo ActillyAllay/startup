@@ -1,39 +1,6 @@
 import React from 'react';
 
-function Queue() {
-
-  localStorage.setItem("queued", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"]]))
-  
-  const [queued, setQueued] = React.useState([]);
-  const queueList = [];
-  
-  React.useEffect(() => {
-    const storedQueue = localStorage.getItem('queued');
-    if (storedQueue) {
-      setQueued(JSON.parse(storedQueue));
-    }
-  }, []);
-
-  if (queued.length) {
-    for (const [i, song] of queued.entries()) {
-      queueList.push(
-        <tr key={i}>
-          <td>{song[0]}</td>
-          <td>{song[1]}</td>
-          <td><button>&uarr;</button><button>&darr;</button></td>
-          <td><button>X</button></td>
-        </tr>
-      )
-    }
-    return queueList;
-  } else {
-    return (
-      <tr>
-        <td>No songs in the queue</td>
-      </tr>
-    )
-  }
-}
+import { Queue } from './queue';
 
 export function Music() {
 
@@ -54,6 +21,12 @@ export function Music() {
         </div>
         <div id="queue" className="box">
           <h3>Queue</h3>
+          <button 
+          onClick={localStorage.setItem("queued", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"]]))}
+          >Set Test Queue</button>
+          <button
+          onClick={localStorage.setItem("queued", []) && setQueued}
+          >Clear Queue</button>
           <table>
           <tbody>           
             {<Queue />}
