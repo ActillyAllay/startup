@@ -11,13 +11,16 @@ import { Music } from './music/music';
 
 export default function App() {
 
-  const [username, setUsername] = React.useState(localStorage.getItem('username') || '');
+  const [username, setUsername] = React.useState(localStorage.getItem("username") || "");
   {/* If username is already assigned a value, then authenticated, else unauth */}
   let initialAuth = username ? true : false;
   const [auth, setAuth] = React.useState(initialAuth);
 
-  function authButton() {
+  function userLogin(u="") {
     setAuth(auth === true ? false : true);
+    setUsername(u);
+    localStorage.setItem("username", u);
+    console.log("Local username is ", u);
   }
 
   return (
@@ -37,7 +40,7 @@ export default function App() {
             <menu id="headerButtons">
               <li className="selected"><NavLink to="">Music Player</NavLink></li>
               <li><NavLink to="playlists">Playlists</NavLink></li>
-              <li><NavLink to="" onClick={authButton}>Log Out</NavLink></li>
+              <li><NavLink to="" onClick={() => userLogin()}>Log Out</NavLink></li>
             </menu>
             )}
             
@@ -57,12 +60,8 @@ export default function App() {
           <Route path='/playlists' element={<Playlists />} />
           {/* Pass along variables to components as element properties*/}
           <Route path='/login' element={<Login
-            auth={auth}
-            userLogin={(u="") => {
-              authButton();
-              setUsername(u);
-              localStorage.setItem("username", u);
-            }}
+            auth = {auth}
+            userLogin = {userLogin}  
           />} />
           {/* Links to the function at the end of this doc */}
           <Route path='*' element={<NotFound />} />

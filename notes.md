@@ -179,7 +179,7 @@ Objects have properties with values, which can be assigned and used in a diction
 
 `class` is a keyword in JS, so it can't be used as an element attribute in JSX. Instead, use `className`.
 
-Why do a function within a function for onClick? Is it because of rerendering delays?
+Why do a function within a function for onClick? Is it because of rerendering delays? -> It seems to be because either it sends onClick data automatically as an input, or it constantly runs the function outside of clicking. The nested function overwrites the weird onClick arguments into proper arguments and makes sure it only happens when the button is clicked.
 
 `auth === true ? false : true` acts as a single line version of if/then/else
 
@@ -267,3 +267,4 @@ Here's an example of moving a local module to a global scale, by attaching it to
 **JavaScript**
 
 - Make the Log In button automatically redirect user to the music page
+- Make the login form only take certain parameters (no empty slots)
