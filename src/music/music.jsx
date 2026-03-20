@@ -4,6 +4,14 @@ import { Queue } from './queue';
 
 export function Music() {
 
+  const [testNum, setTestNum] = React.useState(0);
+
+  // Can't figure out local storage toubles atm, so this variable needs to be
+  //changed alongside each localQueue change to set off the queue useEffect
+  function testChange() {
+    setTestNum((prevTestNum) => prevTestNum + 1);
+  } 
+
   return (
     <main>
       <div id="gridWrapper">
@@ -24,22 +32,25 @@ export function Music() {
           <button 
           onClick={ () => {
             console.log("Set Test Queue has been clicked");
-            console.log(localStorage.getItem('localQueue'));
             localStorage.setItem("localQueue", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"]]));
             console.log(localStorage.getItem('localQueue'));
+            testChange();
           }}
           >Set Test Queue</button>
           <button
           onClick={ () => {
             console.log("Clear Queue has been clicked");
-            console.log(localStorage.getItem('localQueue'));
             localStorage.setItem("localQueue", JSON.stringify([]));
             console.log(localStorage.getItem('localQueue'));
+            testChange();
           }}
           >Clear Queue</button>
           <table>
           <tbody>           
-            {<Queue />}
+            {<Queue 
+                testNum = {testNum}
+                testChange = {testChange}
+              />}
           </tbody>
           </table>
           <br />

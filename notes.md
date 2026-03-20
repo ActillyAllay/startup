@@ -183,6 +183,8 @@ Why do a function within a function for onClick? Is it because of rerendering de
 
 `auth === true ? false : true` acts as a single line version of if/then/else
 
+It looks like the "main area" (the area inside the export function Component(){}) gets run at rendering (when anything happens in it). This means if something inside it sets off the useEffect, it will run before and after the useEffect.
+
 ## Web Service
 
 You send a HTTP request on a certain port server, and have whatever is listening on that port send a response. Caddy is a gateway that redirects requests to other ports (80 or HTTP or 443 or HTTPS port) and process requests to return static files directly.

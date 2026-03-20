@@ -7,14 +7,12 @@ import React from 'react';
 //   setItem("queued", JSON.stringify(move(q, order, direction)));
 // }
 
-export function Queue() {
+export function Queue(props) {
   function move(q, order, direction="") {
     console.log("Pressed")
     
     localStorage.setItem("localQueue", JSON.stringify([["one", "author1", "3:56"]]))
-    
-    console.log("Number is " + testNum);
-    testChange((prevTestNum) => prevTestNum + 1);
+    props.testChange();
   // let array = q;
   // let newArray = array[order];
   // let movement = order;
@@ -31,9 +29,7 @@ export function Queue() {
   // return array;
 }
 
-  const [testNum, testChange] = React.useState(0);
-
-
+  
   const [queued, setQueued] = React.useState([]);
   const queueList = [];
   console.log("Main area is running");
@@ -41,20 +37,11 @@ export function Queue() {
 
   React.useEffect(() => {
     console.log("UseEffect has run");
-    // function updateTable() {
-      console.log("updateTable has run");
-      const storedQueue = localStorage.getItem('localQueue');
-      if (storedQueue) {
-        setQueued(JSON.parse(storedQueue));
-      }
-    // }
-
-    
-    
-    // Checks for a change in localStorage, then closes the listener
-    // window.addEventListener("storage", updateTable)
-    // return () => {window.removeEventListener("storage", updateTable)}
-  }, []);
+    const storedQueue = localStorage.getItem('localQueue');
+    if (storedQueue) {
+      setQueued(JSON.parse(storedQueue));
+    }
+  }, [props.testNum]);
 
   if (queued.length) {
     for (const [i, song] of queued.entries()) {    
