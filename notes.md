@@ -234,6 +234,24 @@ Test run the browser by running `node index.js` in the command line.
 
 **Insights + Troubleshooting**
 
+Here's an example of moving a local module to a global scale, by attaching it to a window and/or putting it in an event listener. Or, if you use a bundler for modules, they should be brought up into the global HTML scope automatically.
+
+```
+<html>
+  <body>
+    <script type="module">
+      import { alertDisplay } from './alert.js';
+      window.btnClick = alertDisplay;
+
+      document.body.addEventListener('keypress', function (event) {
+        alertDisplay('Key pressed');
+      });
+    </script>
+    <button onclick="btnClick('button clicked')">Press me</button>
+  </body>
+</html>
+```
+
 ## To-Do
 
 **CSS**
