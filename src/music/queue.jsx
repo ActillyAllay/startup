@@ -1,13 +1,7 @@
 import React from 'react';
 
-
-
-
-// function arrowButton(q, order, direction) {
-//   setItem("queued", JSON.stringify(move(q, order, direction)));
-// }
-
 export function Queue(props) {
+
   function move(array, order, direction="") {
 
     let newSong = array[order];
@@ -64,7 +58,7 @@ export function Queue(props) {
       <tr>
         <td>No songs in the queue</td>
       </tr>
-    )
+    );
   }
 }
 

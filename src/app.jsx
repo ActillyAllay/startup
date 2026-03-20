@@ -56,8 +56,8 @@ export default function App() {
 
         <Routes>
           <Route path='/' element={<Music />} exact />
-          <Route path='/playlists' element={<Playlists />} />
-          {/* Pass along variables to components as element properties*/}
+          {/* You can pass along variables to components as element properties*/}
+          <Route path='/playlists' element={<Playlists u = {username}/>} />
           <Route path='/login' element={<Login
             auth = {auth}
             userLogin = {userLogin}  

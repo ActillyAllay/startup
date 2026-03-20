@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './login.css';
 
+/* The props parameter is how app.jsx passes down its variables. */
 export function Login(props) {
 
   const [u, setU] = React.useState("");

@@ -1,3 +1,10 @@
+#listSelect {
+  overflow-y: auto;
+  max-height: 150px;
+  scrollbar-color: #ed909e #ffc0cb;
+  scrollbar-gutter: stable both-edges;
+}
+
 #listSelected {
   font-weight: bold;
 }
