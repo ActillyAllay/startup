@@ -9,13 +9,11 @@ import React from 'react';
 
 export function Queue(props) {
   function move(array, order, direction="") {
-    console.log("Queue button pressed; order: " + order);
 
     let newSong = array[order];
     let movement = order;
     if (direction === "up") {
       movement = order - 1;
-      console.log(movement);
       array.splice(movement, 0, newSong);
       console.log(array);
       movement = order + 1;
@@ -25,7 +23,6 @@ export function Queue(props) {
       movement = order;
     };
     array.splice(movement, 1);
-    console.log(array);
 
     localStorage.setItem("localQueue", JSON.stringify(array));
     props.testChange();
@@ -34,10 +31,8 @@ export function Queue(props) {
   
   const [queued, setQueued] = React.useState([]);
   const queueList = [];
-  console.log("Main area is running");
 
   React.useEffect(() => {
-    console.log("UseEffect has run");
     const storedQueue = localStorage.getItem("localQueue");
     if (storedQueue) {
       setQueued(JSON.parse(storedQueue));

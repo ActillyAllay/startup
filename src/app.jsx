@@ -20,7 +20,6 @@ export default function App() {
     setAuth(auth === true ? false : true);
     setUsername(u);
     localStorage.setItem("username", u);
-    console.log("Local username is ", u);
   }
 
   return (
