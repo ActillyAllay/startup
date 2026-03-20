@@ -1,27 +1,32 @@
-import React from 'react';
+import React from "react";
 import "./playlists.css";
 
-import { LS } from './listSelect';
-import { Play } from '../../../simon-react/src/play/play';
+import { LS } from "./list";
+import { LV } from "./list";
 
 class Playlist {
-  constructor(order, name, songs, user) {
+  constructor(order, name, songs, album, user) {
     this.order = order;
     this.name = name;
     this.songs = songs;
+    this.album = album;
     this.userSongs = user + "Songs";
 
   }
 
   save() {
     let array = JSON.parse(localStorage.getItem(this.userSongs));
-    array.push([this.name, this.songs])
+    array.splice(this.order, 1, [this.name, this.songs, this.album])
     localStorage.setItem(this.userSongs, JSON.stringify(array));
   }
 
-  //Once songs can be changed, this function will be a finishEdit type function
-  changeName(newName) {
+  finishEdit(newName) {
     this.name = newName;
+    this.save();
+  }
+
+  changeSongs(newSongs) {
+    this.songs = newSongs;
   }
 
   log() {
@@ -38,23 +43,32 @@ class Playlist {
 export function Playlists(props) {
 
   //For testing purposes: Resets the pl list to 2 for user hi
-  //localStorage.setItem("hiSongs", JSON.stringify([["Smooth Jams", ["Songs"]], ["List 2", ["Songs"]]]));
+  // localStorage.setItem("hiSongs", JSON.stringify([["Smooth Jams", ["Songs"], "placeholder.jpg"], ["List 2", ["Songs"], "placeholder.jpg"]]));
   const [userPlaylists, setUserPlaylists] = React.useState(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
   const plList = [];
 
-  if (userPlaylists.length) {
-    for (const [i, pl] of userPlaylists.entries()) {
-      window["playlist" + i] = new Playlist(i, pl[0], pl[1], props.u);
-      plList.push(<li key={i}>{pl[0]}</li>);
-    }
-  }
-
+  const [view, setView] = React.useState(0);
+  const [edit, setEdit] = React.useState(false);
+  
   function newPlaylist() {
     const index = userPlaylists.length
-    window["playlist" + index] = new Playlist(index, "New Playlist", [], props.u);
+    window["playlist" + index] = new Playlist(index, "New Playlist", [], "placeholder.jpg", props.u);
     window["playlist" + index].save();
     setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
   }
+
+  if (userPlaylists.length) {
+    for (const [i, pl] of userPlaylists.entries()) {
+      window["playlist" + i] = new Playlist(i, pl[0], pl[1], pl[2], props.u);
+      plList.push(
+        <li key={i}><button className="plList" onClick={() => setView(i)}>{pl[0]}</button></li>
+      );
+    }
+  }
+
+  // React.useEffect(() => {
+  //   console.log("RAN THE USEEFFECT");
+  // }, [props.edit]);
 
   return (
     <main>
@@ -62,39 +76,20 @@ export function Playlists(props) {
       <h3>Playlists</h3>
       <div id="listSelect">
         <ul>
-          {<LS plList={plList}/>}
+          {<LS
+            plList={plList}
+            edit={edit}
+          />}
         </ul>
       </div>
       <button onClick={() => newPlaylist()}>Create new playlist</button>
+      
+      {<LV
+        view={window["playlist" + view]}
+        edit={edit}
+        setEdit={setEdit}
+      />}
 
-      <div id="listView" className="box">
-        <img className="album" src="placeholder.jpg" width="100px" />
-        <div id="listInfo">
-          <h3>Smooth Jams</h3>
-          <button>Edit this playlist</button>
-        </div>
-        <div>
-          <table>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Dreams of Our Generation</td>
-              <td>(Placeholder for Song Info)</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Different Song</td>
-              <td>(Even more song info)</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Smooth Peanut Butter</td>
-              <td>(You guessed it--this is song info)</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-      </div>
     </main>
   );
 }

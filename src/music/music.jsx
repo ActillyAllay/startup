@@ -29,13 +29,13 @@ export function Music() {
         </div>
         <div id="queue" className="box">
           <h3>Queue</h3>
-          <button 
+          {/* <button 
           onClick={ () => {
             console.log("Set Test Queue has been clicked");
             localStorage.setItem("localQueue", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"], ["three", "author2", "1:40"], ["four", "author2", "1:40"], ["five", "author2", "1:40"], ["six", "author2", "1:40"], ["seven", "author2", "1:40"]]));
             testChange();
           }}
-          >Set Test Queue</button>
+          >Set Test Queue</button> */}
           <button
           onClick={ () => {
             console.log("Clear Queue has been clicked");

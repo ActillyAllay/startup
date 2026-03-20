@@ -45,7 +45,7 @@ export function Queue(props) {
                 <button onClick={() => move(queued, i, "up")}>&uarr;</button>
               )}
               {i != (queued.length - 1) && (
-              <button onClick={() => move(queued, i, "down")}>&darr;</button>
+                <button onClick={() => move(queued, i, "down")}>&darr;</button>
               )}
             </td>
             <td><button onClick={() => move(queued, i)}>X</button></td>

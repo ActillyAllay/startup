@@ -5,6 +5,15 @@
   scrollbar-gutter: stable both-edges;
 }
 
+.plList {
+  padding: 1px;
+  font-size: 18px;
+  font-weight: normal;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 #listSelected {
   font-weight: bold;
 }
@@ -21,7 +30,7 @@
 #listInfo h3 {
   font-weight: bold;
   /* display: inline; */
-  font-size: 20px;
+  font-size: 24px;
 }
 
 #listInfo button {
