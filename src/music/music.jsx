@@ -22,10 +22,20 @@ export function Music() {
         <div id="queue" className="box">
           <h3>Queue</h3>
           <button 
-          onClick={localStorage.setItem("queued", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"]]))}
+          onClick={ () => {
+            console.log("Set Test Queue has been clicked");
+            console.log(localStorage.getItem('localQueue'));
+            localStorage.setItem("localQueue", JSON.stringify([["one", "author1", "3:56"], ["two", "author2", "1:40"]]));
+            console.log(localStorage.getItem('localQueue'));
+          }}
           >Set Test Queue</button>
           <button
-          onClick={localStorage.setItem("queued", []) && setQueued}
+          onClick={ () => {
+            console.log("Clear Queue has been clicked");
+            console.log(localStorage.getItem('localQueue'));
+            localStorage.setItem("localQueue", JSON.stringify([]));
+            console.log(localStorage.getItem('localQueue'));
+          }}
           >Clear Queue</button>
           <table>
           <tbody>           
