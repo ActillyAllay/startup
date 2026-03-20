@@ -8,36 +8,37 @@ import React from 'react';
 // }
 
 export function Queue(props) {
-  function move(q, order, direction="") {
-    console.log("Pressed")
-    
-    localStorage.setItem("localQueue", JSON.stringify([["one", "author1", "3:56"]]))
+  function move(array, order, direction="") {
+    console.log("Queue button pressed; order: " + order);
+
+    let newSong = array[order];
+    let movement = order;
+    if (direction === "up") {
+      movement = order - 1;
+      console.log(movement);
+      array.splice(movement, 0, newSong);
+      console.log(array);
+      movement = order + 1;
+    } else if (direction === "down") {
+      movement = order + 2;
+      array.splice(movement, 0, newSong);
+      movement = order;
+    };
+    array.splice(movement, 1);
+    console.log(array);
+
+    localStorage.setItem("localQueue", JSON.stringify(array));
     props.testChange();
-  // let array = q;
-  // let newArray = array[order];
-  // let movement = order;
-  // if (direction === "up") {
-  //   movement = order - 1;
-  //   array.splice(movement, 0, newArray);
-  //   movement = order + 1;
-  // } else if (direction === "down") {
-  //   movement = order + 2;
-  //   array.splice(movement, 0, newArray);
-  //   movement = order;
-  // };
-  // array.splice(order, 1);
-  // return array;
 }
 
   
   const [queued, setQueued] = React.useState([]);
   const queueList = [];
   console.log("Main area is running");
-  console.log(localStorage.getItem('localQueue'));
 
   React.useEffect(() => {
     console.log("UseEffect has run");
-    const storedQueue = localStorage.getItem('localQueue');
+    const storedQueue = localStorage.getItem("localQueue");
     if (storedQueue) {
       setQueued(JSON.parse(storedQueue));
     }
