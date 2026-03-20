@@ -50,9 +50,16 @@ export function Queue(props) {
         <tr key={i}>
           <td>{song[0]}</td>
           <td>{song[1]}</td>
-          <td><button onClick={() => move(queued, i, "up")}>&uarr;</button>
-              <button onClick={() => move(queued, i, "down")}>&darr;</button></td>
-          <td><button onClick={() => move(queued, i)}>X</button></td>
+            <td>
+              {/* Prevents the up/down arrows displaying on top/bottom */}
+              {i != 0 && (
+                <button onClick={() => move(queued, i, "up")}>&uarr;</button>
+              )}
+              {i != (queued.length - 1) && (
+              <button onClick={() => move(queued, i, "down")}>&darr;</button>
+              )}
+            </td>
+            <td><button onClick={() => move(queued, i)}>X</button></td>
         </tr>
       )
     }
