@@ -183,6 +183,57 @@ Why do a function within a function for onClick? Is it because of rerendering de
 
 `auth === true ? false : true` acts as a single line version of if/then/else
 
+## Web Service
+
+You send a HTTP request on a certain port server, and have whatever is listening on that port send a response. Caddy is a gateway that redirects requests to other ports (80 or HTTP or 443 or HTTPS port) and process requests to return static files directly.
+
+Endpoints/APIs: Methods or tasks that can retrieve external data
+Serverless Functionality: One endpoint controls only one task, can go through gateways scaled to demand
+
+### HTTP Requests
+
+HTTP requests include GET, POST (create new resource), PUT (update resource using its unique ID), DELETE, and OPTIONS (get metadata). Normally HTTP requests and responses can’t access previous requests. Cookies track requests and provide that information as a header to future requests, allowing memory for preferences or authentication.
+
+```
+<verb> <url path, parameters, anchor> <version>
+[<header key: value>]*
+[
+
+  <body>
+]
+```
+
+HTTP responses follow a similar format. They include status codes that allow the request client to interpret what the response means:
+- 1xx - Informational.
+- 2xx - Success.
+- 201 - Created: The request was successful and a new resource was created.
+- 3xx - Redirect to some other location, or that the previously cached resource is still valid.
+- 308 - Temporary redirect: The resource is temporarily located at a different location. The temporary location is specified in the response location header.
+- 4xx - Client errors. The request is invalid.
+- 401 - Unauthorized: The request did not provide a valid authentication token.
+- 404 - Not found: An unknown resource was requested.
+- 429 - Too many requests: Client made too many requests in too short of a time period.
+- 5xx - Server errors. The request cannot be satisfied due to an error on the server.
+- 503 - Service unavailable: The server is temporarily down. The client should try again with an exponential back off.
+
+### Server Backend
+
+Run the backend with node index.js in the console. To check what Node’s response will be, use the command `curl <URL>`.
+
+Test run the browser by running `node index.js` in the command line.
+
+### Common Commands
+
+`curl <URL>`
+
+>Takes the port URL, eg. localhost:8080/endpoint, and returns what Node's response would be for a real request
+
+`function middlware(req, res, next) {...; next();}`
+
+>Code for a middlware function; make sure to run next() at the end to pass it on to the next middleware
+
+**Insights + Troubleshooting**
+
 ## To-Do
 
 **CSS**
