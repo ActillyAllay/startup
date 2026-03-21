@@ -64,13 +64,12 @@ export function Playlists(props) {
 
   const [view, setView] = React.useState(0);
   const [edit, setEdit] = React.useState(false);
-  const [albumCode, setAlbumCode] = React.useState("compact-disc-solid.svg");
+  const [albumCode, setAlbumCode] = React.useState([]);
   
   function newPlaylist() {
     const index = userPlaylists.length
-    albumColor();
-    const album = albumCode;
-    window["playlist" + index] = new Playlist(index, "New Playlist", [], album, props.u);
+    albumColor(view);
+    window["playlist" + index] = new Playlist(index, "New Playlist", [], "compact-disc-solid.svg", props.u);
     window["playlist" + index].save();
     setView(index);
   }
@@ -81,17 +80,22 @@ export function Playlists(props) {
     localStorage.setItem("localQueue", JSON.stringify(n));
   }
 
-  function albumColor(playlist=null) {
+  function albumColor(v) {
     const colorURL = "https://php-noise.com/noise.php?hex=${hex}&json&base64";
     fetch(colorURL)
     .then((response) => response.json())
     .then((data) => {
-      setAlbumCode(data.base64);
-      if (playlist) {playlist.changeAlbum(data)}
+      setAlbumCode([v, data.base64]);
+      console.log("Ping")
     })
     .catch();
-    
   }
+
+  React.useEffect(() => {
+    if (albumCode.length) {
+      window["playlist" + albumCode[0]].changeAlbum(albumCode[1]);
+    }
+  }, [albumCode]);
 
   if (userPlaylists.length) {
     for (const [i, pl] of userPlaylists.entries()) {
