@@ -5,7 +5,6 @@ import { LS } from "./list";
 import { LV } from "./list";
 
 
-
 export function Playlists(props) {
   class Playlist {
     constructor(order, name, songs, album, user) {
@@ -33,9 +32,8 @@ export function Playlists(props) {
       this.save();
     }
 
-    changeAlbum() {
-      // Will eventually get a random image from a third party API
-      this.album = "placeholder.jpg";
+    changeAlbum(newAlbum) {
+      this.album = newAlbum;
       this.save();
     }
 
@@ -66,10 +64,13 @@ export function Playlists(props) {
 
   const [view, setView] = React.useState(0);
   const [edit, setEdit] = React.useState(false);
+  const [albumCode, setAlbumCode] = React.useState("compact-disc-solid.svg");
   
   function newPlaylist() {
     const index = userPlaylists.length
-    window["playlist" + index] = new Playlist(index, "New Playlist", [], "placeholder.jpg", props.u);
+    albumColor();
+    const album = albumCode;
+    window["playlist" + index] = new Playlist(index, "New Playlist", [], album, props.u);
     window["playlist" + index].save();
     setView(index);
   }
@@ -78,6 +79,18 @@ export function Playlists(props) {
     let old = JSON.parse(localStorage.getItem("localQueue"));
     const n = old.concat(window["playlist" + view].songs);
     localStorage.setItem("localQueue", JSON.stringify(n));
+  }
+
+  function albumColor(playlist=null) {
+    const colorURL = "https://php-noise.com/noise.php?hex=${hex}&json&base64";
+    fetch(colorURL)
+    .then((response) => response.json())
+    .then((data) => {
+      setAlbumCode(data.base64);
+      if (playlist) {playlist.changeAlbum(data)}
+    })
+    .catch();
+    
   }
 
   if (userPlaylists.length) {
@@ -108,6 +121,7 @@ export function Playlists(props) {
         edit={edit}
         setEdit={setEdit}
         plList={plList}
+        albumColor={albumColor}
       />}
 
     </main>
