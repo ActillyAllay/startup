@@ -4,46 +4,49 @@ import "./playlists.css";
 import { LS } from "./list";
 import { LV } from "./list";
 
-class Playlist {
-  constructor(order, name, songs, album, user) {
-    this.order = order;
-    this.name = name;
-    this.songs = songs;
-    this.album = album;
-    this.userSongs = user + "Songs";
 
-  }
-
-  save() {
-    let array = JSON.parse(localStorage.getItem(this.userSongs));
-    array.splice(this.order, 1, [this.name, this.songs, this.album])
-    localStorage.setItem(this.userSongs, JSON.stringify(array));
-  }
-
-  finishEdit(newName) {
-    this.name = newName;
-    this.save();
-  }
-
-  changeSongs(newSongs) {
-    this.songs = newSongs;
-  }
-
-  log() {
-    console.log("This playlist is", this.name, "and has these songs:", this.songs);
-  }
-
-  delete() {
-    let array = JSON.parse(localStorage.getItem(this.userSongs));
-    array.splice(this.order, 1);
-    localStorage.setItem(this.userSongs, JSON.stringify(array));
-  }
-}
 
 export function Playlists(props) {
+  class Playlist {
+    constructor(order, name, songs, album, user) {
+      this.order = order;
+      this.name = name;
+      this.songs = songs;
+      this.album = album;
+      this.userSongs = user + "Songs";
+
+    }
+
+    save() {
+      let array = JSON.parse(localStorage.getItem(this.userSongs));
+      array.splice(this.order, 1, [this.name, this.songs, this.album])
+      localStorage.setItem(this.userSongs, JSON.stringify(array));
+      setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
+    }
+
+    finishEdit(newName) {
+      this.name = newName;
+      this.save();
+    }
+
+    changeSongs(newSongs) {
+      this.songs = newSongs;
+    }
+
+    log() {
+      console.log("This playlist is", this.name, "and has these songs:", this.songs);
+    }
+
+    delete() {
+      let array = JSON.parse(localStorage.getItem(this.userSongs));
+      array.splice(this.order, 1);
+      localStorage.setItem(this.userSongs, JSON.stringify(array));
+      setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
+    }
+  }
 
   //For testing purposes: Resets the pl list to 2 for user hi
-  // localStorage.setItem("hiSongs", JSON.stringify([["Smooth Jams", ["Songs"], "placeholder.jpg"], ["List 2", ["Songs"], "placeholder.jpg"]]));
+  //localStorage.setItem("hiSongs", JSON.stringify([["Smooth Jams", ["Songs"], "placeholder.jpg"], ["List 2", ["Songs"], "placeholder.jpg"]]));
   const [userPlaylists, setUserPlaylists] = React.useState(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
   const plList = [];
 
@@ -54,7 +57,6 @@ export function Playlists(props) {
     const index = userPlaylists.length
     window["playlist" + index] = new Playlist(index, "New Playlist", [], "placeholder.jpg", props.u);
     window["playlist" + index].save();
-    setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
   }
 
   if (userPlaylists.length) {
@@ -65,10 +67,6 @@ export function Playlists(props) {
       );
     }
   }
-
-  // React.useEffect(() => {
-  //   console.log("RAN THE USEEFFECT");
-  // }, [props.edit]);
 
   return (
     <main>
@@ -88,6 +86,7 @@ export function Playlists(props) {
         view={window["playlist" + view]}
         edit={edit}
         setEdit={setEdit}
+        plList={plList}
       />}
 
     </main>
