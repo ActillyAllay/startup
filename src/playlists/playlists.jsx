@@ -31,6 +31,7 @@ export function Playlists(props) {
 
     changeSongs(newSongs) {
       this.songs = newSongs;
+      this.save();
     }
 
     log() {
@@ -60,6 +61,7 @@ export function Playlists(props) {
     const index = userPlaylists.length
     window["playlist" + index] = new Playlist(index, "New Playlist", [], "placeholder.jpg", props.u);
     window["playlist" + index].save();
+    setView(index);
   }
 
   if (userPlaylists.length) {

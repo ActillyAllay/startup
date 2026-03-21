@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+
+import { Songs } from "./songs";
 
 //listSelect div
 export function LS(props) {
@@ -48,13 +50,12 @@ export function LV(props) {
             </div>
             <div>
               <table>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Dreams of Our Generation</td>
-                    <td>(Placeholder for Song Info)</td>
-                  </tr>
-                </tbody>
+              <tbody>
+                {<Songs
+                  view={props.view}
+                  edit={props.edit}
+                />}
+              </tbody>
               </table>
             </div>
           </div>
@@ -70,13 +71,12 @@ export function LV(props) {
             </div>
             <div>
               <table>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Dreams of Our Generation</td>
-                    <td>(Placeholder for Song Info)</td>
-                  </tr>
-                </tbody>
+              <tbody>
+                {<Songs
+                  view={props.view}
+                  edit={props.edit}
+                />}
+              </tbody>
               </table>
             </div>
           </div>

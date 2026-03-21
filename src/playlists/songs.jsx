@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Queue(props) {
+export function Songs(props) {
 
   function move(array, order, direction="") {
 
@@ -17,9 +17,7 @@ export function Queue(props) {
       movement = order;
     };
     array.splice(movement, 1);
-
-    localStorage.setItem("localQueue", JSON.stringify(array));
-    props.testChange();
+    props.view.changeSongs(array);
 }
 
   
@@ -27,11 +25,11 @@ export function Queue(props) {
   const queueList = [];
 
   React.useEffect(() => {
-    const storedQueue = localStorage.getItem("localQueue");
-    if (storedQueue) {
-      setQueued(JSON.parse(storedQueue));
+    const storedSongs = props.view.songs;
+    if (storedSongs) {
+      setQueued(storedSongs);
     }
-  }, [props.testNum]);
+  }, [props.view]);
 
   if (queued.length) {
     for (const [i, song] of queued.entries()) {    
