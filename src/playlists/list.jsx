@@ -24,8 +24,12 @@ export function LV(props) {
   const viewList = [];
   const [listName, setListName] = React.useState("");
   
+  //This is needed, otherwise rendering tries to pull a nonexistent variable
   React.useEffect(() => {
-    setListName(props.view.name);
+    let n = ""
+    try {n = props.view.name;}
+    catch {n = "";}
+    setListName(n);
   }, [props.view]);
 
 
