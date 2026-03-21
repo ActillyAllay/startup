@@ -19,7 +19,11 @@ export function Playlists(props) {
 
     save() {
       let array = JSON.parse(localStorage.getItem(this.userSongs));
-      array.splice(this.order, 1, [this.name, this.songs, this.album])
+      if (array) {
+        array.splice(this.order, 1, [this.name, this.songs, this.album])
+      } else {
+        array = [[this.name, this.songs, this.album]]
+      }
       localStorage.setItem(this.userSongs, JSON.stringify(array));
       setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
     }
