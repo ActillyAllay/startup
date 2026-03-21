@@ -29,6 +29,12 @@ export function Playlists(props) {
       this.save();
     }
 
+    changeAlbum() {
+      // Will eventually get a random image from a third party API
+      this.album = "placeholder.jpg";
+      this.save();
+    }
+
     changeSongs(newSongs) {
       this.songs = newSongs;
       this.save();

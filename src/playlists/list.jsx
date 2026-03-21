@@ -48,6 +48,7 @@ export function LV(props) {
                 props.view.changeSongs([["one", "author1", "3:56"], ["two", "author2", "1:40"], ["three", "author3", "2:44"], ["four", "author4", "2:20"], ["five", "author5", "1:08"]])
               }>Set Test Songs</button>
             </div>
+            <button className="album" onClick={() => props.view.changeAlbum()}>Edit Playlist Image</button>
             <div>
               <table>
               <tbody>
