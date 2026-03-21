@@ -42,6 +42,9 @@ export function Playlists(props) {
       array.splice(this.order, 1);
       localStorage.setItem(this.userSongs, JSON.stringify(array));
       setUserPlaylists(JSON.parse(localStorage.getItem(props.u + "Songs")) || "");
+      if (view > 0) {
+        setView((prevView) => prevView - 1);
+      }
     }
   }
 
