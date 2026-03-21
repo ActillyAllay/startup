@@ -64,6 +64,12 @@ export function Playlists(props) {
     setView(index);
   }
 
+  function loadQueue() {
+    let old = JSON.parse(localStorage.getItem("localQueue"));
+    const n = old.concat(window["playlist" + view].songs);
+    localStorage.setItem("localQueue", JSON.stringify(n));
+  }
+
   if (userPlaylists.length) {
     for (const [i, pl] of userPlaylists.entries()) {
       window["playlist" + i] = new Playlist(i, pl[0], pl[1], pl[2], props.u);
@@ -75,7 +81,7 @@ export function Playlists(props) {
 
   return (
     <main>
-      <button id="listUpload" className="upload">Load into the music player</button>
+      <button id="listUpload" className="upload" onClick={() => loadQueue()}>Load into the music player</button>
       <h3>Playlists</h3>
       <div id="listSelect">
         <ul>
