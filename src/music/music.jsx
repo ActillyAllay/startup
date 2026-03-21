@@ -15,18 +15,18 @@ export function Music() {
   return (
     <main>
       <div id="gridWrapper">
-        <div id="player" className="box">
+        {/* This is the music player, display once functional */}
+        {/* <div id="player" className="box">
           <img className="album" src="placeholder.jpg" width="100px" />
           <p>Currently Playing:</p>
           <p className="songInfo">Dreams of Our Generation</p>
-          {/* Replace controls with custom controls once on JS phase */}
           <div id="audioWrapper">
             <audio controls preload="metadata" src="https://rhwiki.net/w/images/d/df/Song_Wii_Dreams_of_Our_Generation_Japanese.ogg"></audio>
             <button>Settings</button>
             <button>Loop</button>
             <button>Fade</button>
           </div>
-        </div>
+        </div> */}
         <div id="queue" className="box">
           <h3>Queue</h3>
           {/* <button 
@@ -53,10 +53,12 @@ export function Music() {
           </table>
           <br />
         </div>
-        <div id="songUpload">
+        {/* This is the song upload file button, display once functional */}
+        {/* <div id="songUpload">
           <button className="upload">Add songs to the queue</button>
-        </div>
-        <div id="footerHotkeys">
+        </div> */}
+        {/* This is the hotkeys, display once functional */}
+        {/* <div id="footerHotkeys">
             <h3>Hotkeys</h3>
             <ul>
               <li>Placeholder</li>
@@ -64,7 +66,7 @@ export function Music() {
               <li>Hotkeys</li>
               <li>Here</li>
             </ul>
-          </div>
+          </div> */}
       </div>
     </main>
   );

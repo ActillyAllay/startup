@@ -37,7 +37,8 @@ export default function App() {
           <nav>
             {auth === true && (
             <menu id="headerButtons">
-              <li className="selected"><NavLink to="">Music Player</NavLink></li>
+              {/* Add the selected class back in at some point */}
+              <li><NavLink to="">Music Player</NavLink></li>
               <li><NavLink to="playlists">Playlists</NavLink></li>
               <li><NavLink to="" onClick={() => userLogin()}>Log Out</NavLink></li>
             </menu>

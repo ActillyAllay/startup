@@ -39,14 +39,19 @@ export function Songs(props) {
           <td>{song[1]}</td>
             <td>
               {/* Prevents the up/down arrows displaying on top/bottom */}
-              {i != 0 && (
+              {props.edit === true && i != 0 && (
                 <button onClick={() => move(queued, i, "up")}>&uarr;</button>
               )}
-              {i != (queued.length - 1) && (
+              {props.edit === true && i != (queued.length - 1) && (
                 <button onClick={() => move(queued, i, "down")}>&darr;</button>
               )}
             </td>
-            <td><button onClick={() => move(queued, i)}>X</button></td>
+              {props.edit === true && (
+              <td><button onClick={() => move(queued, i)}>X</button></td>
+              )}
+              {props.edit === false && (
+              <td>{song[2]}</td>
+              )}
         </tr>
       )
     }

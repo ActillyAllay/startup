@@ -45,7 +45,7 @@ export function LV(props) {
               <input id="listName" type="text" onChange={(e) => setListName(e.target.value)} value={listName} />
               <button onClick={() => finish(listName)}>Finish editing</button>
               <button onClick={() => 
-                props.view.changeSongs([["one", "author1", "3:56"], ["two", "author2", "1:40"], ["three", "author2", "1:40"], ["four", "author2", "1:40"], ["five", "author2", "1:40"], ["six", "author2", "1:40"], ["seven", "author2", "1:40"]])
+                props.view.changeSongs([["one", "author1", "3:56"], ["two", "author2", "1:40"], ["three", "author3", "2:44"], ["four", "author4", "2:20"], ["five", "author5", "1:08"]])
               }>Set Test Songs</button>
             </div>
             <div>
