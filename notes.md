@@ -273,3 +273,4 @@ Here's an example of moving a local module to a global scale, by attaching it to
 - Make the Log In button automatically redirect user to the music page
 - Make the login form only take certain parameters (no empty slots)
 - Try to refactor queue and list to see if they can be made less redundant
+- Add album image to the queue?

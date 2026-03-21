@@ -99,8 +99,8 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - I made the queue and playlists functional. Playlists can be created, edited, and deleted. They are saved by user and can't be accessed when logged out or logged in as a different user. Songs in a playlist can be loaded into the queue. For both playlists and the queue, songs can be rearranged or deleted.
+- [x] **Hooks** - I used both React.useState and React.useEffect multiple times.
 
 ## 🚀 Service deliverable
 
